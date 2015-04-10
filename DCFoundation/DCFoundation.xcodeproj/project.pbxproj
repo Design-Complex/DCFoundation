@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ABC86961AD81AF3001D81AB /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86951AD81AF3001D81AB /* DCFBase.h */; };
+		6ABC86991AD81B9E001D81AB /* DCFObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86971AD81B9E001D81AB /* DCFObject.cpp */; };
+		6ABC869A1AD81B9E001D81AB /* DCFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86981AD81B9E001D81AB /* DCFObject.h */; };
+		6ABC869D1AD81BC9001D81AB /* DCFRTTI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC869B1AD81BC9001D81AB /* DCFRTTI.cpp */; };
+		6ABC869E1AD81BC9001D81AB /* DCFRTTI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC869C1AD81BC9001D81AB /* DCFRTTI.h */; };
+		6ABC86A11AD81C7D001D81AB /* DCFDefines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC869F1AD81C7D001D81AB /* DCFDefines.cpp */; };
+		6ABC86A21AD81C7D001D81AB /* DCFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86A01AD81C7D001D81AB /* DCFDefines.h */; };
+		6ABC86A81AD81D33001D81AB /* DCFPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86A61AD81D33001D81AB /* DCFPlatform.cpp */; };
+		6ABC86A91AD81D33001D81AB /* DCFPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86A71AD81D33001D81AB /* DCFPlatform.h */; };
+		6ABC86AC1AD81D4C001D81AB /* DCFDarwinPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86AA1AD81D4C001D81AB /* DCFDarwinPlatform.cpp */; };
+		6ABC86AD1AD81D4C001D81AB /* DCFDarwinPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86AB1AD81D4C001D81AB /* DCFDarwinPlatform.h */; };
+		6ABC86B01AD81D97001D81AB /* DCFLinuxPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86AE1AD81D97001D81AB /* DCFLinuxPlatform.cpp */; };
+		6ABC86B11AD81D97001D81AB /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86AF1AD81D97001D81AB /* DCFLinuxPlatform.h */; };
+		6ABC86B41AD81DD5001D81AB /* DCFWindowsPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86B21AD81DD5001D81AB /* DCFWindowsPlatform.cpp */; };
+		6ABC86B51AD81DD5001D81AB /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86B31AD81DD5001D81AB /* DCFWindowsPlatform.h */; };
 		D4C3518D1AC4A863003ECB09 /* DCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C3518C1AC4A863003ECB09 /* DCFoundation.h */; };
-		D4C3518F1AC4A864003ECB09 /* DCFoundationPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C3518E1AC4A864003ECB09 /* DCFoundationPriv.h */; };
-		D4C351911AC4A864003ECB09 /* DCFoundation.cp in Sources */ = {isa = PBXBuildFile; fileRef = D4C351901AC4A864003ECB09 /* DCFoundation.cp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6ABC86951AD81AF3001D81AB /* DCFBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFBase.h; sourceTree = "<group>"; };
+		6ABC86971AD81B9E001D81AB /* DCFObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFObject.cpp; sourceTree = "<group>"; };
+		6ABC86981AD81B9E001D81AB /* DCFObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFObject.h; sourceTree = "<group>"; };
+		6ABC869B1AD81BC9001D81AB /* DCFRTTI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFRTTI.cpp; sourceTree = "<group>"; };
+		6ABC869C1AD81BC9001D81AB /* DCFRTTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFRTTI.h; sourceTree = "<group>"; };
+		6ABC869F1AD81C7D001D81AB /* DCFDefines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFDefines.cpp; sourceTree = "<group>"; };
+		6ABC86A01AD81C7D001D81AB /* DCFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFDefines.h; sourceTree = "<group>"; };
+		6ABC86A31AD81C97001D81AB /* DCFMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFMacros.h; sourceTree = "<group>"; };
+		6ABC86A51AD81D24001D81AB /* DCFSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFSystem.h; sourceTree = "<group>"; };
+		6ABC86A61AD81D33001D81AB /* DCFPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFPlatform.cpp; sourceTree = "<group>"; };
+		6ABC86A71AD81D33001D81AB /* DCFPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFPlatform.h; sourceTree = "<group>"; };
+		6ABC86AA1AD81D4C001D81AB /* DCFDarwinPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFDarwinPlatform.cpp; sourceTree = "<group>"; };
+		6ABC86AB1AD81D4C001D81AB /* DCFDarwinPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFDarwinPlatform.h; sourceTree = "<group>"; };
+		6ABC86AE1AD81D97001D81AB /* DCFLinuxPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFLinuxPlatform.cpp; sourceTree = "<group>"; };
+		6ABC86AF1AD81D97001D81AB /* DCFLinuxPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFLinuxPlatform.h; sourceTree = "<group>"; };
+		6ABC86B21AD81DD5001D81AB /* DCFWindowsPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFWindowsPlatform.cpp; sourceTree = "<group>"; };
+		6ABC86B31AD81DD5001D81AB /* DCFWindowsPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFWindowsPlatform.h; sourceTree = "<group>"; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C3518C1AC4A863003ECB09 /* DCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFoundation.h; sourceTree = "<group>"; };
-		D4C3518E1AC4A864003ECB09 /* DCFoundationPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFoundationPriv.h; sourceTree = "<group>"; };
-		D4C351901AC4A864003ECB09 /* DCFoundation.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DCFoundation.cp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +58,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6ABC86931AD81A4C001D81AB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6ABC86A41AD81CF6001D81AB /* System */,
+				6ABC86941AD81AAA001D81AB /* Base */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6ABC86941AD81AAA001D81AB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6ABC86951AD81AF3001D81AB /* DCFBase.h */,
+				6ABC86A31AD81C97001D81AB /* DCFMacros.h */,
+				6ABC86A01AD81C7D001D81AB /* DCFDefines.h */,
+				6ABC869F1AD81C7D001D81AB /* DCFDefines.cpp */,
+				6ABC86981AD81B9E001D81AB /* DCFObject.h */,
+				6ABC86971AD81B9E001D81AB /* DCFObject.cpp */,
+				6ABC869C1AD81BC9001D81AB /* DCFRTTI.h */,
+				6ABC869B1AD81BC9001D81AB /* DCFRTTI.cpp */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6ABC86A41AD81CF6001D81AB /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6ABC86A51AD81D24001D81AB /* DCFSystem.h */,
+				6ABC86A71AD81D33001D81AB /* DCFPlatform.h */,
+				6ABC86A61AD81D33001D81AB /* DCFPlatform.cpp */,
+				6ABC86AB1AD81D4C001D81AB /* DCFDarwinPlatform.h */,
+				6ABC86AA1AD81D4C001D81AB /* DCFDarwinPlatform.cpp */,
+				6ABC86AF1AD81D97001D81AB /* DCFLinuxPlatform.h */,
+				6ABC86AE1AD81D97001D81AB /* DCFLinuxPlatform.cpp */,
+				6ABC86B31AD81DD5001D81AB /* DCFWindowsPlatform.h */,
+				6ABC86B21AD81DD5001D81AB /* DCFWindowsPlatform.cpp */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		D4C351801AC4A863003ECB09 = {
 			isa = PBXGroup;
 			children = (
@@ -50,8 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C3518C1AC4A863003ECB09 /* DCFoundation.h */,
-				D4C3518E1AC4A864003ECB09 /* DCFoundationPriv.h */,
-				D4C351901AC4A864003ECB09 /* DCFoundation.cp */,
+				6ABC86931AD81A4C001D81AB /* Source */,
 			);
 			path = DCFoundation;
 			sourceTree = "<group>";
@@ -63,8 +130,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABC86AD1AD81D4C001D81AB /* DCFDarwinPlatform.h in Headers */,
+				6ABC869E1AD81BC9001D81AB /* DCFRTTI.h in Headers */,
+				6ABC86A91AD81D33001D81AB /* DCFPlatform.h in Headers */,
+				6ABC86B11AD81D97001D81AB /* DCFLinuxPlatform.h in Headers */,
+				6ABC86961AD81AF3001D81AB /* DCFBase.h in Headers */,
+				6ABC86B51AD81DD5001D81AB /* DCFWindowsPlatform.h in Headers */,
+				6ABC869A1AD81B9E001D81AB /* DCFObject.h in Headers */,
+				6ABC86A21AD81C7D001D81AB /* DCFDefines.h in Headers */,
 				D4C3518D1AC4A863003ECB09 /* DCFoundation.h in Headers */,
-				D4C3518F1AC4A864003ECB09 /* DCFoundationPriv.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C351911AC4A864003ECB09 /* DCFoundation.cp in Sources */,
+				6ABC869D1AD81BC9001D81AB /* DCFRTTI.cpp in Sources */,
+				6ABC86B01AD81D97001D81AB /* DCFLinuxPlatform.cpp in Sources */,
+				6ABC86AC1AD81D4C001D81AB /* DCFDarwinPlatform.cpp in Sources */,
+				6ABC86991AD81B9E001D81AB /* DCFObject.cpp in Sources */,
+				6ABC86B41AD81DD5001D81AB /* DCFWindowsPlatform.cpp in Sources */,
+				6ABC86A81AD81D33001D81AB /* DCFPlatform.cpp in Sources */,
+				6ABC86A11AD81C7D001D81AB /* DCFDefines.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +373,7 @@
 				D4C351961AC4A864003ECB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

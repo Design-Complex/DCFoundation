@@ -7,17 +7,9 @@
  *
  */
 
-#ifndef DCFoundation_
-#define DCFoundation_
+#ifndef _DCFoundation_
+#define _DCFoundation_
 
-/* The classes below are exported */
-#pragma GCC visibility push(default)
+#include <DCFoundation/DCFBase.h>
 
-class DCFoundation
-{
-	public:
-		void HelloWorld(const char *);
-};
-
-#pragma GCC visibility pop
-#endif
+#endif // __DCFoundation__
