@@ -168,6 +168,7 @@
 		D4C351811AC4A863003ECB09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DCF;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Design Complex";
 				TargetAttributes = {
