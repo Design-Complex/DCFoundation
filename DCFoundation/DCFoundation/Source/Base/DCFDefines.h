@@ -11,13 +11,15 @@
 
 #include <DCFoundation/DCFMacros.h>
 #include <thread>
+#include <future>
 
-namespace std {
-    std::thread::id main_thread_id();
-    
-    namespace this_thread {
-        bool is_main_thread();
-    }
-}
+DCF_NAMESPACE_BEGIN
+
+DCF_EXPORT std::thread::id getMainThread();
+
+DCF_EXPORT bool isMainThread();
+DCF_EXPORT bool isMainThread( const std::thread::id threadID );
+
+DCF_NAMESPACE_END
 
 #endif // _DCFDefines_

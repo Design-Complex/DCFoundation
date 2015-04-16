@@ -11,24 +11,22 @@
 
 DCF_NAMESPACE_BEGIN
 
-static std::thread::id __mainThread;
-
-DCF_LIBRARY_INITIALIZER void getMainThread() {
+DCF_LIBRARY_INITIALIZER std::thread::id getMainThread() {
     static std::once_flag flag;
+    static std::thread::id __mainThread;
     std::call_once( flag, [](){
         __mainThread = std::this_thread::get_id();
     } );
+    
+    return __mainThread;
+}
+
+bool isMainThread() {
+    return isMainThread( std::this_thread::get_id() );
+}
+                  
+bool isMainThread( const std::thread::id threadID ) {
+    return ( threadID == getMainThread() );
 }
 
 DCF_NAMESPACE_END
-
-std::thread::id std::main_thread_id() {
-    DCF::getMainThread();
-    
-    return DCF::__mainThread;
-}
-
-bool std::this_thread::is_main_thread() {
-    return ( std::this_thread::get_id() == std::main_thread_id() );
-}
-

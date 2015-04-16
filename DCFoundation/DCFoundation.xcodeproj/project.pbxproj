@@ -16,27 +16,26 @@
 		6ABC86B11AD81D97001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6ABC86B51AD81DD5001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		D45EFEFA1AE04214007240DA /* libDCFoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */; };
-		D45EFF501AE061F9007240DA /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF391AE061F9007240DA /* DCFBase.h */; };
+		D45EFF501AE061F9007240DA /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF391AE061F9007240DA /* DCFBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */; };
-		D45EFF521AE061F9007240DA /* DCFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3B1AE061F9007240DA /* DCFDefines.h */; };
-		D45EFF531AE061F9007240DA /* DCFMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3C1AE061F9007240DA /* DCFMacros.h */; };
+		D45EFF521AE061F9007240DA /* DCFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3B1AE061F9007240DA /* DCFDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF531AE061F9007240DA /* DCFMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3C1AE061F9007240DA /* DCFMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3D1AE061F9007240DA /* DCFObject.cpp */; };
-		D45EFF551AE061F9007240DA /* DCFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3E1AE061F9007240DA /* DCFObject.h */; };
-		D45EFF561AE061F9007240DA /* DCFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */; };
+		D45EFF551AE061F9007240DA /* DCFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3E1AE061F9007240DA /* DCFObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF401AE061F9007240DA /* DCFRTTI.cpp */; };
-		D45EFF581AE061F9007240DA /* DCFRTTI.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF411AE061F9007240DA /* DCFRTTI.h */; };
-		D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF431AE061F9007240DA /* DCFSingleton.h */; };
-		D45EFF5A1AE061F9007240DA /* DCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF441AE061F9007240DA /* DCFoundation.h */; };
-		D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF451AE061F9007240DA /* DCFoundationPriv.h */; };
+		D45EFF581AE061F9007240DA /* DCFRTTI.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF411AE061F9007240DA /* DCFRTTI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF431AE061F9007240DA /* DCFSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF5A1AE061F9007240DA /* DCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF441AE061F9007240DA /* DCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF451AE061F9007240DA /* DCFoundationPriv.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF471AE061F9007240DA /* DCFDarwinPlatform.cpp */; };
-		D45EFF5D1AE061F9007240DA /* DCFDarwinPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF481AE061F9007240DA /* DCFDarwinPlatform.h */; };
-		D45EFF5E1AE061F9007240DA /* DCFLinuxPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF491AE061F9007240DA /* DCFLinuxPlatform.cpp */; };
-		D45EFF5F1AE061F9007240DA /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4A1AE061F9007240DA /* DCFLinuxPlatform.h */; };
+		D45EFF5D1AE061F9007240DA /* DCFDarwinPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF481AE061F9007240DA /* DCFDarwinPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF5F1AE061F9007240DA /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4A1AE061F9007240DA /* DCFLinuxPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D45EFF601AE061F9007240DA /* DCFPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF4B1AE061F9007240DA /* DCFPlatform.cpp */; };
-		D45EFF611AE061F9007240DA /* DCFPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4C1AE061F9007240DA /* DCFPlatform.h */; };
-		D45EFF621AE061F9007240DA /* DCFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4D1AE061F9007240DA /* DCFSystem.h */; };
-		D45EFF631AE061F9007240DA /* DCFWindowsPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */; };
-		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; };
+		D45EFF611AE061F9007240DA /* DCFPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4C1AE061F9007240DA /* DCFPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF621AE061F9007240DA /* DCFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4D1AE061F9007240DA /* DCFSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */; };
+		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +93,7 @@
 		D45EFF4D1AE061F9007240DA /* DCFSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFSystem.h; sourceTree = "<group>"; };
 		D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFWindowsPlatform.cpp; sourceTree = "<group>"; };
 		D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFWindowsPlatform.h; sourceTree = "<group>"; };
+		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +173,7 @@
 		D4C351801AC4A863003ECB09 = {
 			isa = PBXGroup;
 			children = (
+				D4617F0D1AE06C56009B092C /* libc++.dylib */,
 				D45EFF371AE061F9007240DA /* Source */,
 				D4C3518A1AC4A863003ECB09 /* Products */,
 			);
@@ -297,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +311,6 @@
 				D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */,
 				D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */,
 				D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */,
-				D45EFF631AE061F9007240DA /* DCFWindowsPlatform.cpp in Sources */,
-				D45EFF5E1AE061F9007240DA /* DCFLinuxPlatform.cpp in Sources */,
-				D45EFF561AE061F9007240DA /* DCFoundation.cpp in Sources */,
 				D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +357,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -364,9 +365,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -376,10 +378,13 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -397,6 +402,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -404,17 +410,21 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -428,11 +438,9 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.001;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -443,9 +451,7 @@
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
@@ -463,11 +469,9 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_WARN_CXX0X_EXTENSIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.001;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -479,9 +483,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
