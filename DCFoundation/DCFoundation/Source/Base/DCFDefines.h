@@ -2,13 +2,22 @@
 //  DCFDefines.h
 //  DCFoundation
 //
-//  Created by Rob Dotson  on 4/10/15.
-//  Copyright (c) 2015 Design Complex. All rights reserved.
+//  Created by Rob Dotson on 4/16/15.
+//  Copyright (c) 2015 Rob Dotson, Design Complex. All rights reserved.
 //
 
-#ifndef __DCFDefines__
-#define __DCFDefines__
+#ifndef _DCFDefines_
+#define _DCFDefines_
 
-#include <stdio.h>
+#include <DCFoundation/DCFMacros.h>
+#include <thread>
 
-#endif // __DCFDefines__
+namespace std {
+    std::thread::id main_thread_id();
+    
+    namespace this_thread {
+        bool is_main_thread();
+    }
+}
+
+#endif // _DCFDefines_

@@ -2,15 +2,20 @@
 //  DCFBase.h
 //  DCFoundation
 //
-//  Created by Rob Dotson  on 4/10/15.
-//  Copyright (c) 2015 Design Complex. All rights reserved.
+//  Created by Rob Dotson on 4/16/15.
+//  Copyright (c) 2015 Rob Dotson, Design Complex. All rights reserved.
 //
 
-#ifndef __DCFBase__
-#define __DCFBase__
+#ifndef _DCFBase_
+#define _DCFBase_
+
+#include <stdlib.h>
+#include <unistd.h>
+#include <iostream>
+#import <thread>
 
 #import <DCFoundation/DCFDefines.h>
 #import <DCFoundation/DCFMacros.h>
-#import <DCFoundation/DCFRTTI.h>
 
-#endif // __DCFBase__
+
+#endif // _DCFBase_
