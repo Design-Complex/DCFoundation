@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ABC86961AD81AF3001D81AB /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86951AD81AF3001D81AB /* DCFBase.h */; };
+		6ABC86991AD81B9E001D81AB /* DCFObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86971AD81B9E001D81AB /* DCFObject.cpp */; };
+		6ABC869A1AD81B9E001D81AB /* DCFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86981AD81B9E001D81AB /* DCFObject.h */; };
+		6ABC869D1AD81BC9001D81AB /* DCFRTTI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC869B1AD81BC9001D81AB /* DCFRTTI.cpp */; };
+		6ABC869E1AD81BC9001D81AB /* DCFRTTI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC869C1AD81BC9001D81AB /* DCFRTTI.h */; };
+		6ABC86A11AD81C7D001D81AB /* DCFDefines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC869F1AD81C7D001D81AB /* DCFDefines.cpp */; };
+		6ABC86A21AD81C7D001D81AB /* DCFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86A01AD81C7D001D81AB /* DCFDefines.h */; };
+		6ABC86A81AD81D33001D81AB /* DCFPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86A61AD81D33001D81AB /* DCFPlatform.cpp */; };
+		6ABC86A91AD81D33001D81AB /* DCFPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86A71AD81D33001D81AB /* DCFPlatform.h */; };
+		6ABC86AC1AD81D4C001D81AB /* DCFDarwinPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86AA1AD81D4C001D81AB /* DCFDarwinPlatform.cpp */; };
+		6ABC86AD1AD81D4C001D81AB /* DCFDarwinPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86AB1AD81D4C001D81AB /* DCFDarwinPlatform.h */; };
+		6ABC86B01AD81D97001D81AB /* DCFLinuxPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86AE1AD81D97001D81AB /* DCFLinuxPlatform.cpp */; };
+		6ABC86B11AD81D97001D81AB /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86AF1AD81D97001D81AB /* DCFLinuxPlatform.h */; };
+		6ABC86B41AD81DD5001D81AB /* DCFWindowsPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ABC86B21AD81DD5001D81AB /* DCFWindowsPlatform.cpp */; };
+		6ABC86B51AD81DD5001D81AB /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABC86B31AD81DD5001D81AB /* DCFWindowsPlatform.h */; };
+		D4C3518D1AC4A863003ECB09 /* DCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C3518C1AC4A863003ECB09 /* DCFoundation.h */; };
 		D45EFEE61AE040B9007240DA /* DCFoundation.h in Copy Files */ = {isa = PBXBuildFile; fileRef = D4C3518C1AC4A863003ECB09 /* DCFoundation.h */; };
 		D45EFEE71AE040B9007240DA /* DCFBase.h in Copy Files */ = {isa = PBXBuildFile; fileRef = D45EFEE51AE04003007240DA /* DCFBase.h */; };
 		D45EFEE91AE040B9007240DA /* DCFMacros.h in Copy Files */ = {isa = PBXBuildFile; fileRef = D46EE6301ACDB76E0029D278 /* DCFMacros.h */; };
@@ -129,6 +145,15 @@
 		D49268571AC5BED900AD4F33 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				6ABC86A51AD81D24001D81AB /* DCFSystem.h */,
+				6ABC86A71AD81D33001D81AB /* DCFPlatform.h */,
+				6ABC86A61AD81D33001D81AB /* DCFPlatform.cpp */,
+				6ABC86AB1AD81D4C001D81AB /* DCFDarwinPlatform.h */,
+				6ABC86AA1AD81D4C001D81AB /* DCFDarwinPlatform.cpp */,
+				6ABC86AF1AD81D97001D81AB /* DCFLinuxPlatform.h */,
+				6ABC86AE1AD81D97001D81AB /* DCFLinuxPlatform.cpp */,
+				6ABC86B31AD81DD5001D81AB /* DCFWindowsPlatform.h */,
+				6ABC86B21AD81DD5001D81AB /* DCFWindowsPlatform.cpp */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -176,6 +201,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABC86AD1AD81D4C001D81AB /* DCFDarwinPlatform.h in Headers */,
+				6ABC869E1AD81BC9001D81AB /* DCFRTTI.h in Headers */,
+				6ABC86A91AD81D33001D81AB /* DCFPlatform.h in Headers */,
+				6ABC86B11AD81D97001D81AB /* DCFLinuxPlatform.h in Headers */,
+				6ABC86961AD81AF3001D81AB /* DCFBase.h in Headers */,
+				6ABC86B51AD81DD5001D81AB /* DCFWindowsPlatform.h in Headers */,
+				6ABC869A1AD81B9E001D81AB /* DCFObject.h in Headers */,
+				6ABC86A21AD81C7D001D81AB /* DCFDefines.h in Headers */,
 				D4C3518D1AC4A863003ECB09 /* DCFoundation.h in Headers */,
 				D46EE6311ACDB76E0029D278 /* DCFMacros.h in Headers */,
 				D45EFEFD1AE04BAD007240DA /* DCFSingleton.h in Headers */,
