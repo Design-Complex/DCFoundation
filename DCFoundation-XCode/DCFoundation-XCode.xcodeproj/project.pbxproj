@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		D439DCEF1ADFFDA100B15B37 /* DCFoundation C++ Class.xctemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "DCFoundation C++ Class.xctemplate"; sourceTree = "<group>"; };
+		D49268641AC5E0E000AD4F33 /* DCFoundation C++ File.xctemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "DCFoundation C++ File.xctemplate"; sourceTree = "<group>"; };
+		D49268651AC5E0E000AD4F33 /* DCFoundation Header File.xctemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "DCFoundation Header File.xctemplate"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		D492685C1AC5E0B800AD4F33 = {
+			isa = PBXGroup;
+			children = (
+				D49268631AC5E0BF00AD4F33 /* Templates */,
+			);
+			sourceTree = "<group>";
+		};
+		D49268631AC5E0BF00AD4F33 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				D439DCEF1ADFFDA100B15B37 /* DCFoundation C++ Class.xctemplate */,
+				D49268641AC5E0E000AD4F33 /* DCFoundation C++ File.xctemplate */,
+				D49268651AC5E0E000AD4F33 /* DCFoundation Header File.xctemplate */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		D492685D1AC5E0B800AD4F33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+			};
+			buildConfigurationList = D49268601AC5E0B800AD4F33 /* Build configuration list for PBXProject "DCFoundation-XCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D492685C1AC5E0B800AD4F33;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		D49268611AC5E0B800AD4F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		D49268621AC5E0B800AD4F33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D49268601AC5E0B800AD4F33 /* Build configuration list for PBXProject "DCFoundation-XCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49268611AC5E0B800AD4F33 /* Debug */,
+				D49268621AC5E0B800AD4F33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D492685D1AC5E0B800AD4F33 /* Project object */;
+}
