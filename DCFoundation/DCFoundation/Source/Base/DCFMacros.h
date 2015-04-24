@@ -33,6 +33,7 @@
 private: \
 TypeName( const TypeName & ) =delete; \
 TypeName & operator=( const TypeName & ) =delete; \
+void operator=( const TypeName & ) =delete
 
 #define DCFPrivateConstructors( TypeName ) \
 private: \
@@ -45,6 +46,7 @@ DCFPrivateCopyAndAssign( TypeName )
 private: \
 TypeName( const TypeName & ); \
 TypeName & operator=( const TypeName & ) \
+void operator=( const TypeName & )
 
 #define DCFPrivateConstructors( TypeName ) \
 private: \

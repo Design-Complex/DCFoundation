@@ -1,22 +1,41 @@
 
 #import <DCFoundation/DCFoundation.h>
 
+#import <mutex>
+
+static std::recursive_mutex lock;
+
+using DCFMutexGuard = std::lock_guard<std::recursive_mutex>;
+
 class foo {
     foo() {}
 };
 
-void func() {
-    std::cout << "I'm " << ( DCF::isMainThread()  ? "" : "not " ) << "the main thread!" << std::endl;
+unsigned int func( unsigned int i ) {
+    DCFMutexGuard g( lock );
+    std::cout << "I'm " << i << " " << ( DCF::isMainThread()  ? "" : "not " ) << "the main thread!" << std::endl;
+    
+    return i;
 }
 
-
 int main( int argc, char ** argv, char ** envp ) {
-    func();
+    func( 0 );
     
-    std::thread t( func );
-    std::async( std::launch::async, func );
+    std::thread t( func, 1 );
+    t.detach();
     
-    t.join();
+    std::thread t1( []() -> int { return func( 2 ); } );
+    t1.join();
+    
+    auto h3 = std::async( std::launch::async, func, 3 );
+    auto h4 = std::async( std::launch::async, []()->int { return func( 4 ); } );
+    auto h5 = std::async( std::launch::any, []()-> int{ return func( 5 ); } );
+    
+    {
+        DCFMutexGuard g( lock );
+        std::cout << h3.get() << h4.get() << h5.get() << std::endl;
+    }
+    
     
 //    while( *envp != nullptr )
 //        std::cout << *envp++ << "\n";
