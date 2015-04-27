@@ -60,6 +60,7 @@ DCFPrivateCopyAndAssign( TypeName )
 #pragma mark - Compiler Macros
 
 #define DCF_EXPORT      __attribute__((visibility("default")))
+#define DCF_NOEXPORT      __attribute__((visibility("hidden")))
 
 #define DCF_DEPRECATED  __attribute__((deprecated))
 
