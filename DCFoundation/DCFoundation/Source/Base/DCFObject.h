@@ -11,4 +11,14 @@
 
 #include <DCFoundation/DCFBase.h>
 
+DCF_NAMESPACE_BEGIN
+
+class DCF_EXPORT DCFObject {
+public:
+    std::string description() const;
+    std::string debugDescription() const;
+};
+
+DCF_NAMESPACE_END
+
 #endif // __DCFObject__
