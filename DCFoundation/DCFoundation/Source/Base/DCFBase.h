@@ -12,10 +12,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <iostream>
-#import <thread>
 
-#import <DCFoundation/DCFDefines.h>
-#import <DCFoundation/DCFMacros.h>
+#include <DCFoundation/DCFMacros.h>
+#include <DCFoundation/DCFDefines.h>
+#include <DCFoundation/DCFConcurrency.h>
 
 
 #endif // _DCFBase_

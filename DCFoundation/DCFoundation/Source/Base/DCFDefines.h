@@ -9,17 +9,6 @@
 #ifndef _DCFDefines_
 #define _DCFDefines_
 
-#include <DCFoundation/DCFMacros.h>
-#include <thread>
-#include <future>
 
-DCF_NAMESPACE_BEGIN
-
-DCF_EXPORT std::thread::id getMainThread();
-
-DCF_EXPORT bool isMainThread();
-DCF_EXPORT bool isMainThread( const std::thread::id threadID );
-
-DCF_NAMESPACE_END
 
 #endif // _DCFDefines_
