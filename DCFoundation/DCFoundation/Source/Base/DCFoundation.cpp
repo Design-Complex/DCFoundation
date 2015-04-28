@@ -1,7 +1,7 @@
 
 #import <DCFoundation/DCFoundation.h>
-
 #import <mutex>
+#import <gtest/gtest.h>
 
 static std::recursive_mutex lock;
 
@@ -18,29 +18,46 @@ unsigned int func( unsigned int i ) {
     return i;
 }
 
-int main( int argc, char ** argv, char ** envp ) {
-    func( 0 );
-    
-    std::thread t( func, 1 );
-    t.detach();
-    
-    std::thread t1( []() -> int { return func( 2 ); } );
-    t1.join();
-    
-    auto h3 = std::async( std::launch::async, func, 3 );
-    auto h4 = std::async( std::launch::async, []()->int { return func( 4 ); } );
-    auto h5 = std::async( std::launch::any, []()-> int{ return func( 5 ); } );
-    
-    {
-        DCFMutexGuard g( lock );
-        std::cout << h3.get() << h4.get() << h5.get() << std::endl;
-    }
-    
-    
-//    while( *envp != nullptr )
-//        std::cout << *envp++ << "\n";
-//    
-//    std::cout << std::endl;
-    
-    return EXIT_SUCCESS;
+TEST(foo, bar) {
+    ASSERT_EQ( 1, 1 );
 }
+
+TEST( thread, mainThread ) {
+    ASSERT_EQ( DCF::getMainThread(), std::this_thread::get_id() );
+    
+    ASSERT_TRUE( DCF::isMainThread( std::this_thread::get_id() ) );
+}
+
+TEST( thread, notMainThread ) {
+    std::thread t( []() {
+        ASSERT_FALSE( DCF::isMainThread() );
+    });
+    t.join();
+}
+
+//int main( int argc, char ** argv, char ** envp ) {
+//    func( 0 );
+//    
+//    std::thread t( func, 1 );
+//    t.detach();
+//    
+//    std::thread t1( []() -> int { return func( 2 ); } );
+//    t1.join();
+//    
+//    auto h3 = std::async( std::launch::async, func, 3 );
+//    auto h4 = std::async( std::launch::async, []()->int { return func( 4 ); } );
+//    auto h5 = std::async( std::launch::any, []()-> int{ return func( 5 ); } );
+//    
+//    {
+//        DCFMutexGuard g( lock );
+//        std::cout << h3.get() << h4.get() << h5.get() << std::endl;
+//    }
+//    
+//    
+////    while( *envp != nullptr )
+////        std::cout << *envp++ << "\n";
+////    
+////    std::cout << std::endl;
+//    
+//    return EXIT_SUCCESS;
+//}
