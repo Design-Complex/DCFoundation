@@ -3,8 +3,10 @@
 //  DCFoundation
 //
 //  Created by Rob Dotson on 4/2/15.
-//  Copyright (c) 2015 Rob Dotson, Design Complex. All rights reserved.
+//  Copyright (c) 2015 Design Complex LLC. All rights reserved.
 //
+
+/** @file */
 
 #ifndef _DCFMacros_
 #define _DCFMacros_
@@ -13,11 +15,9 @@
 
 #if defined( __cplusplus )
 
-#define DCF_EXTERN_C_BEGIN  extern "C" {
+#define DCF_EXTERN_C extern "C"
+#define DCF_EXTERN_C_BEGIN  DCF_EXTERN_C {
 #define DCF_EXTERN_C_END    }
-
-#define DCF_NAMESPACE_BEGIN namespace DCF {
-#define DCF_NAMESPACE_END }
 
 #endif // defined( __cplusplus )
 
@@ -32,8 +32,8 @@
 #define DCFPrivateCopyAndAssign( TypeName ) \
 private: \
 TypeName( const TypeName & ) =delete; \
-TypeName & operator=( const TypeName & ) =delete; \
-void operator=( const TypeName & ) =delete
+TypeName & operator=( const TypeName & ) =delete; //\
+\\void operator=( const TypeName & ) =delete
 
 #define DCFPrivateConstructors( TypeName ) \
 private: \
@@ -57,8 +57,19 @@ DCFPrivateCopyAndAssign( TypeName )
 
 #pragma mark - Namespace
 
+/** @def DCF_NAMESPACE_BEGIN
+    @brief The declaration tag for the DCF Namespace. It must be included in all framework files before any types, classes, functions or variables are declared or defined.
+ */
+#define DCF_NAMESPACE_BEGIN namespace DCF {
+
+/*! @def DCF_NAMESPACE_END
+    @brief The closing declaration tag for the DCF Namespace. It must be included in all framework files after any types, classes, functions or variables are declared or defined.
+ */
+#define DCF_NAMESPACE_END }
+
 #pragma mark - Compiler Macros
 
+    /// Should this symbol be exported?
 #define DCF_EXPORT      __attribute__((visibility("default")))
 #define DCF_NOEXPORT      __attribute__((visibility("hidden")))
 
