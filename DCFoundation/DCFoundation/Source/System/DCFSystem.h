@@ -9,4 +9,6 @@
 #ifndef __DCFSystem__
 #define __DCFSystem__
 
+#import <DCFoundation/DCFPlatform.h>
+
 #endif // __DCFSystem__
