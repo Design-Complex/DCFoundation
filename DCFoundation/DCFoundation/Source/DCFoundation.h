@@ -10,6 +10,8 @@
 #ifndef _DCFoundation_
 #define _DCFoundation_
 
+/*! \file */
+
 #import <DCFoundation/DCFBase.h>
 
 #if !DCF_CPP11

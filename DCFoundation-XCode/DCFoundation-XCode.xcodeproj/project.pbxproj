@@ -36,7 +36,9 @@
 		D492685D1AC5E0B800AD4F33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DCF;
 				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Design Complex LLC";
 			};
 			buildConfigurationList = D49268601AC5E0B800AD4F33 /* Build configuration list for PBXProject "DCFoundation-XCode" */;
 			compatibilityVersion = "Xcode 3.2";

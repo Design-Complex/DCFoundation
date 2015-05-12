@@ -2,6 +2,9 @@
 #import <DCFoundation/DCFoundation.h>
 #import <mutex>
 #import <gtest/gtest.h>
+#import <DCFoundation/DCFObject.h>
+
+
 
 static std::recursive_mutex lock;
 
@@ -15,17 +18,25 @@ unsigned int func( unsigned int i ) {
     DCFMutexGuard g( lock );
     std::cout << "I'm " << i << " " << ( DCF::isMainThread()  ? "" : "not " ) << "the main thread!" << std::endl;
     
+    DCF::DCFObject obj;
+    std::string str = obj.debugDescription();
+    
+    std::cout << str << std::endl;
+    
+    
     return i;
 }
 
 TEST(foo, bar) {
     ASSERT_EQ( 1, 1 );
+    
+    int i = func( 1 );
 }
 
 TEST( thread, mainThread ) {
-    ASSERT_EQ( DCF::getMainThread(), std::this_thread::get_id() );
+    ASSERT_EQ( DCF::getMainThread(), DCF::currentThreadID() );
     
-    ASSERT_TRUE( DCF::isMainThread( std::this_thread::get_id() ) );
+    ASSERT_TRUE( DCF::isMainThread( DCF::currentThreadID() ) );
 }
 
 TEST( thread, notMainThread ) {

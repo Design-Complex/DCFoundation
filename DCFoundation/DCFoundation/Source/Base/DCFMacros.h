@@ -6,16 +6,18 @@
 //  Copyright (c) 2015 Design Complex LLC. All rights reserved.
 //
 
-/** @file */
+/*! \file */
 
 #ifndef _DCFMacros_
 #define _DCFMacros_
 
 #pragma mark - C
 
+#define DCF_EXTERN extern
+
 #if defined( __cplusplus )
 
-#define DCF_EXTERN_C extern "C"
+#define DCF_EXTERN_C DCF_EXTERN "C"
 #define DCF_EXTERN_C_BEGIN  DCF_EXTERN_C {
 #define DCF_EXTERN_C_END    }
 
@@ -70,8 +72,14 @@ DCFPrivateCopyAndAssign( TypeName )
 #pragma mark - Compiler Macros
 
     /// Should this symbol be exported?
-#define DCF_EXPORT      __attribute__((visibility("default")))
-#define DCF_NOEXPORT      __attribute__((visibility("hidden")))
+
+#define DCF_VISIBLE     __attribute__((visibility("default")))
+#define DCF_INVISIBLE   __attribute__((visibility("hidden")))
+
+#define DCF_EXPORT      DCF_EXTERN DCF_VISIBLE
+#define DCF_NOEXPORT    DCF_INVISIBLE
+
+#define DCF_IMPORT      DCF_EXTERN
 
 #define DCF_DEPRECATED  __attribute__((deprecated))
 

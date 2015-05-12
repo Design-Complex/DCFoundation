@@ -6,9 +6,42 @@
 //___COPYRIGHT___
 //
 
-#ifndef _____PROJECTNAMEASIDENTIFIER________FILEBASENAMEASIDENTIFIER_____
-#define _____PROJECTNAMEASIDENTIFIER________FILEBASENAMEASIDENTIFIER_____
+#ifndef ___FILEBASENAMEASIDENTIFIER___
+#define ___FILEBASENAMEASIDENTIFIER___
 
-#include <stdio.h>
+/*! \file */
 
-#endif /* defined(_____PROJECTNAMEASIDENTIFIER________FILEBASENAMEASIDENTIFIER_____) */
+#pragma mark - Includes
+
+#include <DCFoundation/DCFObject.h>
+
+DCF_NAMESPACE_BEGIN
+
+#pragma mark - Type Definitions
+
+#pragma mark - Forward Declarations
+
+#pragma mark - Class Interface
+
+/*!
+    @class __FILEBASENAMEASIDENTIFIER__
+    @abstract foo
+    @discussion bar
+    @namespace DCF
+*/
+class __FILEBASENAMEASIDENTIFIER__ : public DCFObject {
+
+#pragma mark - Public Members
+    
+public:
+#pragma mark Constructors
+    ___FILEBASENAMEASIDENTIFIER___();
+    
+#pragma mark Destructor
+    virtual ~___FILEBASENAMEASIDENTIFIER___();
+    
+}; // class __FILEBASENAMEASIDENTIFIER__
+
+DCF_NAMESPACE_END
+
+#endif // ___FILEBASENAMEASIDENTIFIER___

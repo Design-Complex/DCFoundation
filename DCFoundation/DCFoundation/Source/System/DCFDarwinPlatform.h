@@ -9,6 +9,8 @@
 #ifndef __DCFDarwinPlatform__
 #define __DCFDarwinPlatform__
 
+/*! \file */
+
 #include <DCFoundation/DCFPlatform.h>
 
 #endif // __DCFDarwinPlatform__

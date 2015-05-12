@@ -40,7 +40,22 @@
 		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */; };
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
+		D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D900C51AF947840082CC7A /* DCFUtility.cpp */; };
+		D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D900C61AF947840082CC7A /* DCFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		D4F498C11AF916FE0022A50E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			name = .doxy;
+			outputFiles = (
+			);
+			script = "/usr/local/bin/doxygen -g";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		D45EFEF71AE041F4007240DA /* PBXContainerItemProxy */ = {
@@ -103,6 +118,10 @@
 		D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFWindowsPlatform.h; sourceTree = "<group>"; };
 		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D900C51AF947840082CC7A /* DCFUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtility.cpp; sourceTree = "<group>"; };
+		D4D900C61AF947840082CC7A /* DCFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFUtility.h; sourceTree = "<group>"; };
+		D4F498BA1AF914A60022A50E /* doxygen-layout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "doxygen-layout.xml"; sourceTree = "<group>"; };
+		D4F498BB1AF914A60022A50E /* doxygen.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = doxygen.cfg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +158,9 @@
 		D45EFF371AE061F9007240DA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D45EFF381AE061F9007240DA /* Base */,
 				D45EFF441AE061F9007240DA /* DCFoundation.h */,
 				D45EFF451AE061F9007240DA /* DCFoundationPriv.h */,
+				D45EFF381AE061F9007240DA /* Base */,
 				D45EFF461AE061F9007240DA /* System */,
 			);
 			name = Source;
@@ -159,9 +178,12 @@
 				D45EFF3D1AE061F9007240DA /* DCFObject.cpp */,
 				D45EFF411AE061F9007240DA /* DCFRTTI.h */,
 				D45EFF401AE061F9007240DA /* DCFRTTI.cpp */,
+				D4D900C61AF947840082CC7A /* DCFUtility.h */,
+				D4D900C51AF947840082CC7A /* DCFUtility.cpp */,
 				D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */,
 				6A02B86A1AEF0A5900D92050 /* Concurrency */,
 				D45EFF421AE061F9007240DA /* Patterns */,
+				D4A7CA141AF8FEB5006360D4 /* Serializer */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -179,20 +201,28 @@
 			children = (
 				D45EFF4D1AE061F9007240DA /* DCFSystem.h */,
 				D45EFF4C1AE061F9007240DA /* DCFPlatform.h */,
+				D45EFF4B1AE061F9007240DA /* DCFPlatform.cpp */,
 				D45EFF481AE061F9007240DA /* DCFDarwinPlatform.h */,
 				D45EFF471AE061F9007240DA /* DCFDarwinPlatform.cpp */,
 				D45EFF4A1AE061F9007240DA /* DCFLinuxPlatform.h */,
 				D45EFF491AE061F9007240DA /* DCFLinuxPlatform.cpp */,
-				D45EFF4B1AE061F9007240DA /* DCFPlatform.cpp */,
 				D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */,
 				D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */,
 			);
 			path = System;
 			sourceTree = "<group>";
 		};
+		D4A7CA141AF8FEB5006360D4 /* Serializer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Serializer;
+			sourceTree = "<group>";
+		};
 		D4C351801AC4A863003ECB09 = {
 			isa = PBXGroup;
 			children = (
+				D4F498B71AF913360022A50E /* Resources */,
 				D42779961AEEBF9500B6680A /* libgtest_main.a */,
 				D42779941AEEBE6500B6680A /* gtest.framework */,
 				D4617F0D1AE06C56009B092C /* libc++.dylib */,
@@ -208,6 +238,32 @@
 				D45EFEF01AE041EE007240DA /* dcftest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D4F498B71AF913360022A50E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4F498B81AF913510022A50E /* Scripts */,
+			);
+			name = Resources;
+			path = DCFoundation/Resources;
+			sourceTree = "<group>";
+		};
+		D4F498B81AF913510022A50E /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				D4F498B91AF914A60022A50E /* doxygen */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		D4F498B91AF914A60022A50E /* doxygen */ = {
+			isa = PBXGroup;
+			children = (
+				D4F498BA1AF914A60022A50E /* doxygen-layout.xml */,
+				D4F498BB1AF914A60022A50E /* doxygen.cfg */,
+			);
+			path = doxygen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +283,7 @@
 				D45EFF501AE061F9007240DA /* DCFBase.h in Headers */,
 				D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */,
 				D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */,
+				D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */,
 				6ABC86B11AD81D97001D81AB /* (null) in Headers */,
 				6A02B86E1AEF0ACA00D92050 /* DCFConcurrency.h in Headers */,
 				6ABC86961AD81AF3001D81AB /* (null) in Headers */,
@@ -273,6 +330,7 @@
 				D4C351871AC4A863003ECB09 /* Headers */,
 			);
 			buildRules = (
+				D4F498C11AF916FE0022A50E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -289,7 +347,7 @@
 			attributes = {
 				CLASSPREFIX = DCF;
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "Rob Dotson, Design Complex";
+				ORGANIZATIONNAME = "Design Complex LLC";
 				TargetAttributes = {
 					D45EFEEF1AE041EE007240DA = {
 						CreatedOnToolsVersion = 6.3;
@@ -332,6 +390,7 @@
 			files = (
 				D45EFF601AE061F9007240DA /* DCFPlatform.cpp in Sources */,
 				D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */,
+				D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */,
 				6A02B86D1AEF0ACA00D92050 /* DCFConcurrency.cpp in Sources */,
 				D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */,
 				D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */,

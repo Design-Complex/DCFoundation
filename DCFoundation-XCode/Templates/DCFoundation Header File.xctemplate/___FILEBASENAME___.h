@@ -6,8 +6,21 @@
 //___COPYRIGHT___
 //
 
-#ifndef ___PROJECTNAMEASIDENTIFIER_______FILEBASENAMEASIDENTIFIER_______FILEEXTENSION___
-#define ___PROJECTNAMEASIDENTIFIER_______FILEBASENAMEASIDENTIFIER_______FILEEXTENSION___
+/*! \file */
 
+#ifndef ___FILEBASENAMEASIDENTIFIER___
+#define ___FILEBASENAMEASIDENTIFIER___
 
-#endif
+#pragma mark - Includes
+
+#include <DCFoundation/DCFObject.h>
+
+DCF_NAMESPACE_BEGIN
+
+#pragma mark - Type Definitions
+
+#pragma mark - Forward Declarations
+
+DCF_NAMESPACE_END
+
+#endif // ___FILEBASENAMEASIDENTIFIER___

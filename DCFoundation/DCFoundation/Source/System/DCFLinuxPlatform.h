@@ -9,6 +9,8 @@
 #ifndef __DCFLinuxPlatform__
 #define __DCFLinuxPlatform__
 
+/*! \file */
+
 #include <DCFoundation/DCFPlatform.h>
 
 #endif // __DCFLinuxPlatform__
