@@ -10,8 +10,32 @@
 
 #include <sstream>
 #include <cxxabi.h>
+#include <thread>
 
 DCF_NAMESPACE_BEGIN
+
+#pragma mark Static Methods
+
+const std::string & DCFObject::className() const {
+    
+    static std::once_flag   flag;
+    static std::string      result;
+    std::call_once( flag, [this](){
+        int status = -4;
+        std::unique_ptr<char, decltype( std::free ) *> p{ abi::__cxa_demangle( typeid( *this ).name(), nullptr, nullptr, &status ), std::free };
+        
+        switch ( status ) {
+            case 0:
+                <#statements#>
+                break;
+                
+            default:
+                break;
+        }
+    } );
+    
+    
+}
 
 #pragma mark Constructors
 

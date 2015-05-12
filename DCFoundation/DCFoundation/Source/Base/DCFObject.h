@@ -30,7 +30,12 @@ DCF_NAMESPACE_BEGIN
  */
 class DCF_VISIBLE DCFObject {
     
+#pragma mark - Protected Members
+protected:
+    
+    
 #pragma mark - Public Members
+    
 public:
     
 #pragma mark Constructors
@@ -55,7 +60,7 @@ public:
     virtual std::string debugDescription() const;
     
         /// Returns a string containing the unmangled type name of the object.
-    virtual std::string className() const;
+    virtual const std::string & className() const;
     
 }; // class DCFObject
 
