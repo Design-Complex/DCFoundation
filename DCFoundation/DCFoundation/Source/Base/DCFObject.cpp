@@ -26,7 +26,7 @@ const std::string & DCFObject::className() const {
         
         switch ( status ) {
             case 0:
-                <#statements#>
+                result = *p;
                 break;
                 
             default:
@@ -34,7 +34,7 @@ const std::string & DCFObject::className() const {
         }
     } );
     
-    
+    return result;
 }
 
 #pragma mark Constructors
