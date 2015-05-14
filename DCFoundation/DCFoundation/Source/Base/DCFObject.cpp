@@ -10,32 +10,19 @@
 
 #include <sstream>
 #include <cxxabi.h>
-#include <thread>
+#include <map>
 
 DCF_NAMESPACE_BEGIN
 
+#pragma mark Static Variables
+
+using DCFTypeDictionary = std::map<const char *,std::string>;
+static DCFMutex _typeLock;
+static DCFTypeDictionary _types{};
+
 #pragma mark Static Methods
 
-const std::string & DCFObject::className() const {
-    
-    static std::once_flag   flag;
-    static std::string      result;
-    std::call_once( flag, [this](){
-        int status = -4;
-        std::unique_ptr<char, decltype( std::free ) *> p{ abi::__cxa_demangle( typeid( *this ).name(), nullptr, nullptr, &status ), std::free };
-        
-        switch ( status ) {
-            case 0:
-                result = *p;
-                break;
-                
-            default:
-                break;
-        }
-    } );
-    
-    return result;
-}
+
 
 #pragma mark Constructors
 
@@ -59,16 +46,54 @@ std::string DCFObject::description() const {
 std::string DCFObject::debugDescription() const {
     std::stringstream ss( std::ios_base::out );
     
-    const char * myType = typeid( *this ).name();
-    
-    
     ss << "<[";
-    ss << myType;
+    ss << this->className();
+//    ss << "( " << typeid( *this ).name() << " )";
     ss << "@";
     ss << static_cast<const void *>( this );
     ss << "]>";
     
     return ss.str();
+}
+
+const std::string & DCFObject::className() const {
+    
+    DCFMutexGuard g( _typeLock );
+    
+        /// Find this type id
+    const char * type = DCF_THIS_TYPE.name();
+    DCFTypeDictionary::iterator i = _types.find( type );
+   
+        // Found it! Return
+    if( i != _types.end() )
+        return i->second;
+    
+        // Couldn't find it, let's create one!
+    {
+        int status = -4;
+        
+        std::unique_ptr<char, decltype( std::free ) *> p{ abi::__cxa_demangle( type, nullptr, nullptr, &status ), std::free };
+        
+        switch ( status ) {
+            case 0:
+                _types[ type ] = &( *p );
+                
+                break;
+            case -1:
+                    //throw std::bad_alloc;
+                break;
+            case -2:
+                    //throw std::invalid_argument( "The mangled name is not valid!" );
+                break;
+            case -3:
+                throw std::invalid_argument( "One of the arguments is invalid!" );
+                break;
+            default:
+                break;
+        }
+    }
+    
+    return _types[ type ];
 }
 
 DCF_NAMESPACE_END
