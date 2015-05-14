@@ -3,26 +3,39 @@
 #import <mutex>
 #import <gtest/gtest.h>
 #import <DCFoundation/DCFObject.h>
-
+#import <DCFoundation/DCFSingleton.h>
 
 
 static std::recursive_mutex lock;
 
 using DCFMutexGuard = std::lock_guard<std::recursive_mutex>;
 
-class foo {
+class foo : public DCF::DCFObject {
+public:
+    using DCF::DCFObject::DCFObject;
     foo() {}
+    virtual ~foo() {}
 };
+
+class bar : public foo {
+    using foo::foo;
+    DCFSingletonDeclare( bar );
+};
+DCFSingletonDefine( bar );
+bar::bar() {}
+bar::~bar() {}
 
 unsigned int func( unsigned int i ) {
     DCFMutexGuard g( lock );
     std::cout << "I'm " << i << " " << ( DCF::isMainThread()  ? "" : "not " ) << "the main thread!" << std::endl;
+    DCF::DCFObject toast;
+    foo obj;
     
-    DCF::DCFObject obj;
-    std::string str = obj.debugDescription();
+    std::cout << toast.debugDescription() << std::endl;
+    std::cout << obj.debugDescription() << std::endl;
     
-    std::cout << str << std::endl;
-    
+    std::cout << bar::sharedInstance().debugDescription() << std::endl;
+    std::cout << bar::sharedInstance().debugDescription() << std::endl;
     
     return i;
 }

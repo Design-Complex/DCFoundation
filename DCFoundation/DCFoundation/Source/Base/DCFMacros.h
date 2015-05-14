@@ -39,7 +39,7 @@ TypeName & operator=( const TypeName & ) =delete; //\
 
 #define DCFPrivateConstructors( TypeName ) \
 private: \
-TypeName() =delete; \
+TypeName(); \
 DCFPrivateCopyAndAssign( TypeName )
 
 #else
