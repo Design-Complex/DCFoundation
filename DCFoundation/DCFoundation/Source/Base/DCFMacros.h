@@ -81,6 +81,11 @@ DCFPrivateCopyAndAssign( TypeName )
 
 #define DCF_IMPORT      DCF_EXTERN
 
+    /*! @def DCF_THIS_TYPE
+        @brief A macro which compiles to typeid(*this)
+     */
+#define DCF_THIS_TYPE   typeid( *this )
+
 #define DCF_DEPRECATED  __attribute__((deprecated))
 
 #define DCF_LIBRARY_INITIALIZER __attribute__((constructor))
