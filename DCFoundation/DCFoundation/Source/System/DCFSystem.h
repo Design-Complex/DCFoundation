@@ -11,6 +11,18 @@
 
 /*! \file */
 
+#ifndef __has_feature
+#   define __has_feature(x) 0
+#endif
+
+#ifndef __has_extension
+#   define __has_extension __has_feature
+#endif
+
+#ifndef __has_attribute
+#   define __has_attribute(x) 0
+#endif
+
 #pragma mark - APPLE
 
 #if !defined( __DARWIN__ )
@@ -18,6 +30,8 @@
 #if defined( __APPLE__ ) && defined( __MACH__ )
 
 #define __DARWIN__
+#include <Availability.h>
+#include <AvailabilityMacros.h>
 #include <TargetConditionals.h>
 #include <DCFoundation/DCFDarwinPlatform.h>
 
