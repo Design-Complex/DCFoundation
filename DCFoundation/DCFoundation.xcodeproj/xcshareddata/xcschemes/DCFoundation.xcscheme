@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4FC9AA51B0A494C00E6B56D"
+               BuildableName = "DCFoundation Tests.xctest"
+               BlueprintName = "DCFoundation Tests"
+               ReferencedContainer = "container:DCFoundation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D4C351881AC4A863003ECB09"
+            BuildableName = "libDCFoundation.dylib"
+            BlueprintName = "DCFoundation"
+            ReferencedContainer = "container:DCFoundation.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
