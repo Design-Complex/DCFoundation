@@ -20,4 +20,7 @@
 
 #endif // C++ too old!
 
+
+#import <DCFoundation/DCFObject.h>
+
 #endif // _DCFoundation_
