@@ -46,12 +46,12 @@ std::string DCFObject::description() const {
 std::string DCFObject::debugDescription() const {
     std::stringstream ss( std::ios_base::out );
     
-    ss << "<[";
+    ss << "<";
     ss << this->className();
 //    ss << "( " << typeid( *this ).name() << " )";
     ss << "@";
     ss << static_cast<const void *>( this );
-    ss << "]>";
+    ss << ">";
     
     return ss.str();
 }
@@ -80,10 +80,10 @@ const std::string & DCFObject::className() const {
                 
                 break;
             case -1:
-                    //throw std::bad_alloc;
+                    throw std::bad_alloc();
                 break;
             case -2:
-                    //throw std::invalid_argument( "The mangled name is not valid!" );
+                    throw std::invalid_argument( "The mangled name is not valid!" );
                 break;
             case -3:
                 throw std::invalid_argument( "One of the arguments is invalid!" );

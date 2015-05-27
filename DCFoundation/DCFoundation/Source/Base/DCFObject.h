@@ -55,7 +55,7 @@ public:
     
     /**
      * Returns a string description of debug information for this object instance.
-     * @return std::string in the format <obj-name@0x0000000>contents</obj>
+     * @return std::string in the format <className@0x0000000>contents</obj>
      */
     virtual std::string debugDescription() const;
     

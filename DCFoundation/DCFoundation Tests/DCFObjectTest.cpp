@@ -16,7 +16,9 @@ class DCFObjectTest : public ::testing::Test {
 };
 
 TEST_F( DCFObjectTest, className ) {
+    DCFObject obj;
     
+    ASSERT_EQ( obj.className(), "DCF::DCFObject" );
 }
 
 TEST_F( DCFObjectTest, description ) {
@@ -25,9 +27,14 @@ TEST_F( DCFObjectTest, description ) {
 
 TEST_F( DCFObjectTest, debugDescription ) {
     DCFObject obj;
-    DCFObject obj2;
     
-    ASSERT_TRUE( &obj != nullptr ) << "Uh oh!";
+    ASSERT_NE( obj.debugDescription(), "" ) << "Didn't return a description!";
+    
+    std::ostringstream oss;
+    oss << "<" << obj.className() << "@" << &obj << ">";
+    
+    ASSERT_EQ( obj.debugDescription(), oss.str() ) << "Invalid format";
+    
     
     
 }

@@ -41,6 +41,7 @@
 		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */; };
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
+		D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */; };
 		D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D900C51AF947840082CC7A /* DCFUtility.cpp */; };
 		D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D900C61AF947840082CC7A /* DCFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4FC9AAC1B0A494C00E6B56D /* libDCFoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */; };
@@ -130,6 +131,7 @@
 		D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFWindowsPlatform.cpp; sourceTree = "<group>"; };
 		D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFWindowsPlatform.h; sourceTree = "<group>"; };
 		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLRepresentation.h; sourceTree = "<group>"; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D900C51AF947840082CC7A /* DCFUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtility.cpp; sourceTree = "<group>"; };
 		D4D900C61AF947840082CC7A /* DCFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFUtility.h; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				D4D900C51AF947840082CC7A /* DCFUtility.cpp */,
 				D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */,
 				6A02B86A1AEF0A5900D92050 /* Concurrency */,
+				D4806AEC1B16494900F3609C /* Interfaces */,
 				D45EFF421AE061F9007240DA /* Patterns */,
 				D4A7CA141AF8FEB5006360D4 /* Serializer */,
 			);
@@ -235,6 +238,14 @@
 				D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		D4806AEC1B16494900F3609C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		D4A7CA141AF8FEB5006360D4 /* Serializer */ = {
@@ -324,6 +335,7 @@
 				D45EFF581AE061F9007240DA /* DCFRTTI.h in Headers */,
 				6ABC869E1AD81BC9001D81AB /* (null) in Headers */,
 				D45EFF5A1AE061F9007240DA /* DCFoundation.h in Headers */,
+				D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */,
 				6ABC86A91AD81D33001D81AB /* (null) in Headers */,
 				D45EFF521AE061F9007240DA /* DCFDefines.h in Headers */,
 				D45EFF501AE061F9007240DA /* DCFBase.h in Headers */,
