@@ -40,7 +40,6 @@ using DCFRecursiveMutexGuard = std::lock_guard<DCFRecursiveMutex>;
 
 template <typename LockType>
 class DCF_VISIBLE DCFLockable {
-//        friend class MutexObj;
 private:
         /// The basic lock.
     LockType _lock;
