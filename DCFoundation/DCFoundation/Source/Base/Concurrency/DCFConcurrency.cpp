@@ -8,7 +8,6 @@
 
 #include "DCFConcurrency.h"
 
-#include <mutex>
 
 DCF_NAMESPACE_BEGIN
 

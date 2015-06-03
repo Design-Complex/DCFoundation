@@ -9,18 +9,12 @@
 #ifndef __DCFConcurrency__
 #define __DCFConcurrency__
 
-#include <DCFoundation/DCFMacros.h>
+#include <DCFoundation/DCFLockable.h>
+
 #include <thread>
-#include <mutex>
 #include <future>
 
 DCF_NAMESPACE_BEGIN
-
-    /// A Mutex class
-using DCFMutex = std::recursive_mutex;
-
-    /// A Mutex guard
-using DCFMutexGuard = std::lock_guard<std::recursive_mutex>;
 
     /// The unique identifier of a particular thread.
 using DCFThreadID = std::thread::id;
