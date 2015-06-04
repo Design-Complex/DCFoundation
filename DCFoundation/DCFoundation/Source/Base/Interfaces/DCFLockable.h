@@ -38,7 +38,7 @@ using DCFRecursiveMutexGuard = std::lock_guard<DCFRecursiveMutex>;
  @namespace DCF
  */
 
-template <typename LockType>
+template <class LockType = DCFMutex>
 class DCF_VISIBLE DCFLockable {
 private:
         /// The basic lock.
@@ -101,6 +101,11 @@ public:
     virtual void unlock() noexcept { _lock.unlock(); }
     
 };
+
+#pragma mark Template Specializations
+
+template class DCF_VISIBLE DCFLockable<DCFMutex>;
+template class DCF_VISIBLE DCFLockable<DCFRecursiveMutex>;
 
 
 DCF_NAMESPACE_END

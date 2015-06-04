@@ -10,10 +10,11 @@
 #include <DCFoundation/DCFObject.h>
 #include <DCFoundation/DCFLockable.h>
 
-DCF_NAMESPACE_BEGIN
+DCF_TEST_NAMESPACE_BEGIN
 
 class DCFLockableTest : public ::testing::Test {};
 
+using namespace DCF;
 class MutexObj : public virtual DCFObject, public virtual DCFLockable<DCFMutex> {
     FRIEND_TEST( DCFLockableTest, mutexCopy );
     FRIEND_TEST( DCFLockableTest, mutexAssign );
@@ -152,4 +153,4 @@ TEST_F( DCFLockableTest, recursiveMutexMove ) {
     t.join();
 }
 
-DCF_NAMESPACE_END
+DCF_TEST_NAMESPACE_END
