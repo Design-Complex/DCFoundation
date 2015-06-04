@@ -56,6 +56,12 @@ std::string DCFObject::debugDescription() const {
     return ss.str();
 }
 
+std::vector<std::string> & DCFObject::classPath() const { // Just a stub
+    std::vector<std::string> * s = new std::vector<std::string>;
+    
+    return *s;
+}
+
 const std::string & DCFObject::className() const {
     
     DCFMutexGuard g( _typeLock );

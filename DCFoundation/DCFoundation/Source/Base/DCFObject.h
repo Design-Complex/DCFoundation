@@ -15,6 +15,8 @@
 
 #include <DCFoundation/DCFBase.h>
 
+#include <vector>
+
 DCF_NAMESPACE_BEGIN
 
 #pragma mark - Type Definitions
@@ -58,6 +60,12 @@ public:
      * @return std::string in the format <className@0x0000000>contents</obj>
      */
     virtual std::string debugDescription() const;
+    
+        /**
+            Returns an array of std::strings describing each segment of a full class name (including namespaces). A for a class in the DCF namespace, this method will return an array with the following: arr[0] = "DCF", arr[2] = "DCFObject"
+         
+        */
+    virtual std::vector<std::string> & classPath() const;
     
         /// Returns a string containing the unmangled type name of the object.
     virtual const std::string & className() const;
