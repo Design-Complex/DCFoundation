@@ -18,9 +18,6 @@
 		6ABC86B11AD81D97001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6ABC86B51AD81DD5001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */; };
-		D42779951AEEBE6500B6680A /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42779941AEEBE6500B6680A /* gtest.framework */; };
-		D42779971AEEBF9500B6680A /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D42779961AEEBF9500B6680A /* libgtest_main.a */; };
-		D45EFEFA1AE04214007240DA /* libDCFoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */; };
 		D45EFF501AE061F9007240DA /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF391AE061F9007240DA /* DCFBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */; };
 		D45EFF521AE061F9007240DA /* DCFDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF3B1AE061F9007240DA /* DCFDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,8 +38,8 @@
 		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D46113261B1F4E270019775A /* DCFLockable.h in Headers */ = {isa = PBXBuildFile; fileRef = D46113251B1F4E270019775A /* DCFLockable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D46113271B1F53670019775A /* DCFLockableTest.cpp */; };
-		D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */; };
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
+		D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */; };
 		D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */; };
 		D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D900C51AF947840082CC7A /* DCFUtility.cpp */; };
 		D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D900C61AF947840082CC7A /* DCFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,13 +62,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
-		D45EFEF71AE041F4007240DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4C351811AC4A863003ECB09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4C351881AC4A863003ECB09;
-			remoteInfo = DCFoundation;
-		};
 		D4FC9AAD1B0A494C00E6B56D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4C351811AC4A863003ECB09 /* Project object */;
@@ -82,15 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D45EFEEE1AE041EE007240DA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		D49268581AC5BF2E00AD4F33 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,7 +91,6 @@
 		D40A09931B0B73EC003F947F /* DCFTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFTesting.h; sourceTree = "<group>"; };
 		D42779941AEEBE6500B6680A /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../../../../../Library/Frameworks/gtest.framework; sourceTree = "<group>"; };
 		D42779961AEEBF9500B6680A /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../../../../../Library/Frameworks/gtest.framework/Resources/libgtest_main.a; sourceTree = "<group>"; };
-		D45EFEF01AE041EE007240DA /* dcftest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dcftest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45EFF391AE061F9007240DA /* DCFBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFBase.h; sourceTree = "<group>"; };
 		D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFDefines.cpp; sourceTree = "<group>"; };
 		D45EFF3B1AE061F9007240DA /* DCFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFDefines.h; sourceTree = "<group>"; };
@@ -135,6 +115,7 @@
 		D46113251B1F4E270019775A /* DCFLockable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFLockable.h; sourceTree = "<group>"; };
 		D46113271B1F53670019775A /* DCFLockableTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFLockableTest.cpp; sourceTree = "<group>"; };
 		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtilityTest.cpp; sourceTree = "<group>"; };
 		D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLRepresentation.h; sourceTree = "<group>"; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D900C51AF947840082CC7A /* DCFUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtility.cpp; sourceTree = "<group>"; };
@@ -147,16 +128,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D45EFEED1AE041EE007240DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D42779971AEEBF9500B6680A /* libgtest_main.a in Frameworks */,
-				D42779951AEEBE6500B6680A /* gtest.framework in Frameworks */,
-				D45EFEFA1AE04214007240DA /* libDCFoundation.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4C351861AC4A863003ECB09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */,
-				D45EFEF01AE041EE007240DA /* dcftest */,
 				D4FC9AA61B0A494C00E6B56D /* DCFoundation Tests.xctest */,
 			);
 			name = Products;
@@ -314,6 +284,7 @@
 			children = (
 				D40A09931B0B73EC003F947F /* DCFTesting.h */,
 				D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */,
+				D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */,
 				D46113271B1F53670019775A /* DCFLockableTest.cpp */,
 				D4FC9AA81B0A494C00E6B56D /* Supporting Files */,
 			);
@@ -367,24 +338,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D45EFEEF1AE041EE007240DA /* dcftest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D45EFEF41AE041EE007240DA /* Build configuration list for PBXNativeTarget "dcftest" */;
-			buildPhases = (
-				D45EFEEC1AE041EE007240DA /* Sources */,
-				D45EFEED1AE041EE007240DA /* Frameworks */,
-				D45EFEEE1AE041EE007240DA /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D45EFEF81AE041F4007240DA /* PBXTargetDependency */,
-			);
-			name = dcftest;
-			productName = dcftest;
-			productReference = D45EFEF01AE041EE007240DA /* dcftest */;
-			productType = "com.apple.product-type.tool";
-		};
 		D4C351881AC4A863003ECB09 /* DCFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4C351941AC4A864003ECB09 /* Build configuration list for PBXNativeTarget "DCFoundation" */;
@@ -432,9 +385,6 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Design Complex LLC";
 				TargetAttributes = {
-					D45EFEEF1AE041EE007240DA = {
-						CreatedOnToolsVersion = 6.3;
-					};
 					D4C351881AC4A863003ECB09 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -456,7 +406,6 @@
 			projectRoot = "";
 			targets = (
 				D4C351881AC4A863003ECB09 /* DCFoundation */,
-				D45EFEEF1AE041EE007240DA /* dcftest */,
 				D4FC9AA51B0A494C00E6B56D /* DCFoundation Tests */,
 			);
 		};
@@ -473,14 +422,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D45EFEEC1AE041EE007240DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4617F071AE0681C009B092C /* DCFoundation.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4C351851AC4A863003ECB09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */,
 				D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */,
 				D4FC9AB31B0A49D800E6B56D /* DCFGoogleTestAdaptor.mm in Sources */,
 				D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */,
@@ -508,11 +450,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D45EFEF81AE041F4007240DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4C351881AC4A863003ECB09 /* DCFoundation */;
-			targetProxy = D45EFEF71AE041F4007240DA /* PBXContainerItemProxy */;
-		};
 		D4FC9AAE1B0A494C00E6B56D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4C351881AC4A863003ECB09 /* DCFoundation */;
@@ -521,47 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D45EFEF51AE041EE007240DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/gtest.framework/Resources",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D45EFEF61AE041EE007240DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks/gtest.framework/Resources",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		D4C351921AC4A864003ECB09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,7 +465,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
@@ -614,7 +510,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
@@ -712,6 +608,7 @@
 		D4FC9AAF1B0A494C00E6B56D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -734,6 +631,7 @@
 		D4FC9AB01B0A494C00E6B56D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -751,15 +649,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D45EFEF41AE041EE007240DA /* Build configuration list for PBXNativeTarget "dcftest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D45EFEF51AE041EE007240DA /* Debug */,
-				D45EFEF61AE041EE007240DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D4C351841AC4A863003ECB09 /* Build configuration list for PBXProject "DCFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
