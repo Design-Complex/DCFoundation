@@ -17,7 +17,7 @@ DCF_NAMESPACE_BEGIN
 
 DCF_EXTERN_C_BEGIN
 
-DCF_EXPORT void DCFDemangleIdentifier( const char * mangled, char * unmangled );
+DCF_EXPORT const char * DCFDemangleIdentifier( const char * mangled );
 
 DCF_EXTERN_C_END
 
