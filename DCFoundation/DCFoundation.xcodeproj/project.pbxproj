@@ -17,6 +17,9 @@
 		6ABC86AD1AD81D4C001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6ABC86B11AD81D97001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
 		6ABC86B51AD81DD5001D81AB /* (null) in Headers */ = {isa = PBXBuildFile; };
+		7CD7DC261B2B34F90019313A /* DCFXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7DC251B2B34F90019313A /* DCFXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD7DC2A1B2B35600019313A /* DCFXMLDOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7DC291B2B35600019313A /* DCFXMLDOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD7DC2C1B2B35850019313A /* DCFXMLSAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7DC2B1B2B35850019313A /* DCFXMLSAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */; };
 		D45EFF501AE061F9007240DA /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF391AE061F9007240DA /* DCFBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */; };
@@ -87,6 +90,9 @@
 /* Begin PBXFileReference section */
 		6A02B86B1AEF0ACA00D92050 /* DCFConcurrency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFConcurrency.cpp; sourceTree = "<group>"; };
 		6A02B86C1AEF0ACA00D92050 /* DCFConcurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFConcurrency.h; sourceTree = "<group>"; };
+		7CD7DC251B2B34F90019313A /* DCFXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXML.h; sourceTree = "<group>"; };
+		7CD7DC291B2B35600019313A /* DCFXMLDOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLDOM.h; sourceTree = "<group>"; };
+		7CD7DC2B1B2B35850019313A /* DCFXMLSAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLSAX.h; sourceTree = "<group>"; };
 		D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFObjectTest.cpp; sourceTree = "<group>"; };
 		D40A09931B0B73EC003F947F /* DCFTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFTesting.h; sourceTree = "<group>"; };
 		D42779941AEEBE6500B6680A /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../../../../../Library/Frameworks/gtest.framework; sourceTree = "<group>"; };
@@ -157,6 +163,32 @@
 			path = Concurrency;
 			sourceTree = "<group>";
 		};
+		7CD7DC241B2B34CB0019313A /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				7CD7DC251B2B34F90019313A /* DCFXML.h */,
+				7CD7DC281B2B35320019313A /* DOM */,
+				7CD7DC271B2B35100019313A /* SAX */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		7CD7DC271B2B35100019313A /* SAX */ = {
+			isa = PBXGroup;
+			children = (
+				7CD7DC2B1B2B35850019313A /* DCFXMLSAX.h */,
+			);
+			path = SAX;
+			sourceTree = "<group>";
+		};
+		7CD7DC281B2B35320019313A /* DOM */ = {
+			isa = PBXGroup;
+			children = (
+				7CD7DC291B2B35600019313A /* DCFXMLDOM.h */,
+			);
+			path = DOM;
+			sourceTree = "<group>";
+		};
 		D45EFF371AE061F9007240DA /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +196,7 @@
 				D45EFF451AE061F9007240DA /* DCFoundationPriv.h */,
 				D45EFF381AE061F9007240DA /* Base */,
 				D45EFF461AE061F9007240DA /* System */,
+				7CD7DC241B2B34CB0019313A /* XML */,
 			);
 			name = Source;
 			path = DCFoundation/Source;
@@ -310,6 +343,7 @@
 				D45EFF5D1AE061F9007240DA /* DCFDarwinPlatform.h in Headers */,
 				6ABC86AD1AD81D4C001D81AB /* (null) in Headers */,
 				D45EFF581AE061F9007240DA /* DCFRTTI.h in Headers */,
+				7CD7DC2A1B2B35600019313A /* DCFXMLDOM.h in Headers */,
 				6ABC869E1AD81BC9001D81AB /* (null) in Headers */,
 				D45EFF5A1AE061F9007240DA /* DCFoundation.h in Headers */,
 				D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */,
@@ -319,6 +353,7 @@
 				D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */,
 				D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */,
 				D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */,
+				7CD7DC261B2B34F90019313A /* DCFXML.h in Headers */,
 				6ABC86B11AD81D97001D81AB /* (null) in Headers */,
 				6A02B86E1AEF0ACA00D92050 /* DCFConcurrency.h in Headers */,
 				6ABC86961AD81AF3001D81AB /* (null) in Headers */,
@@ -332,6 +367,7 @@
 				6ABC869A1AD81B9E001D81AB /* (null) in Headers */,
 				D46113261B1F4E270019775A /* DCFLockable.h in Headers */,
 				6ABC86A21AD81C7D001D81AB /* (null) in Headers */,
+				7CD7DC2C1B2B35850019313A /* DCFXMLSAX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
