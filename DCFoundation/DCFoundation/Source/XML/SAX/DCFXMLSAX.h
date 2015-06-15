@@ -9,5 +9,6 @@
 #ifndef _DCFXMLSAX_
 #define _DCFXMLSAX_
 
+#include <DCFoundation/DCFXMLAttributeList.h>
 
 #endif // _DCFXMLSAX_

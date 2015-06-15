@@ -10,9 +10,8 @@
 #define _DCFXML_
 
 #include <DCFoundation/DCFBase.h>
+#include <DCFoundation/DCFXMLBase.h>
 
-#define DCF_XML_NAMESPACE_BEGIN namespace XML
-#define DCF_XML_NAMESPACE_END DCF_NAMESPACE_END
 
 #include <DCFoundation/DCFXMLSAX.h>
 #include <DCFoundation/DCFXMLDOM.h>
