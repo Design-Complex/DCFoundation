@@ -17,4 +17,8 @@
 namespace DCF {}
 
 
+#pragma mark - Basic Types
+
+typedef std::size_t  DCFHashCode;
+
 #endif // _DCFDefines_
