@@ -16,14 +16,14 @@ class DCFUtilityTest : public ::testing::Test {};
 
 using namespace DCF;
 
-TEST_F( DCFUtilityTest, demangleIdentifier ) {
-    DCFObject obj;
-    
-    std::string correct = "DCF::DCFObject";
-    
-    ASSERT_EQ( correct, obj.className() );
-    
-    ASSERT_EQ( correct, DCFDemangleIdentifier( typeid( DCFObject ).name() ) );
-}
+//TEST_F( DCFUtilityTest, demangleIdentifier ) {
+//    DCFObject obj;
+//    
+//    std::string correct = "DCF::DCFObject";
+//    
+//    ASSERT_EQ( correct, obj.className() );
+//    
+//    ASSERT_EQ( correct, DCFDemangleIdentifier( typeid( DCFObject ).name() ) );
+//}
 
 DCF_TEST_NAMESPACE_END

@@ -70,6 +70,21 @@ public:
         /// Returns a string containing the unmangled type name of the object.
     virtual const std::string & className() const;
     
+        /// Returns a DCFHashCode for the instance. Subclasses MUST override this method.
+    virtual const DCFHashCode hash() const = 0;
+    
+        /// Returns true if the classes are equal
+    virtual bool operator ==( const DCFObject & rhs ) const;
+    
+        /// Returns true if the classes are not equal. The default implementation calls !(operator==).
+    virtual bool operator !=( const DCFObject & rhs ) const;
+    
+        /// Returns true if the pointers to both objects are equal. If they are *equivalent* meaning the hash codes are the same, this also returns true. If this is not desired behavior, subclasses SHOULD override this method.
+    virtual bool operator ==( const DCFObject * rhs ) const;
+    
+        /// Returns true only if the hash values of the two pointers is not equal.
+    virtual bool operator !=( const DCFObject * rhs ) const;
+    
 }; // class DCFObject
 
 DCF_NAMESPACE_END

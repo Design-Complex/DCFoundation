@@ -102,4 +102,27 @@ const std::string & DCFObject::className() const {
     return _types[ type ];
 }
 
+const DCFHashCode DCFObject::hash() const {
+    return std::hash<decltype(this)>()( this );
+}
+
+bool DCFObject::operator ==( const DCFObject & rhs ) const {
+    return ( this->hash() == rhs.hash() );
+}
+
+bool DCFObject::operator !=( const DCFObject & rhs ) const {
+    return !( this->operator==( rhs ) );
+}
+
+bool DCFObject::operator ==( const DCFObject * rhs ) const {
+    if( this == rhs )
+        return true;
+    
+    return ( this->hash() == rhs->hash() );
+}
+
+bool DCFObject::operator !=( const DCFObject * rhs ) const {
+    return !( this->operator==( rhs ) );
+}
+
 DCF_NAMESPACE_END

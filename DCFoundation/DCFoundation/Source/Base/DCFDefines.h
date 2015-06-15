@@ -9,6 +9,8 @@
 #ifndef _DCFDefines_
 #define _DCFDefines_
 
+#include <cstddef>
+
 /*! \file */
 
 /** @namespace DCF

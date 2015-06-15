@@ -20,6 +20,10 @@ class MutexObj : public virtual DCFObject, public virtual DCFLockable<DCFMutex> 
     FRIEND_TEST( DCFLockableTest, mutexAssign );
     FRIEND_TEST( DCFLockableTest, mutexMove );
     
+    
+    virtual const DCFHashCode hash() const {
+        return DCFObject::hash();
+    }
 }; // MutexObj
 
 TEST_F( DCFLockableTest, mutexCopy ) {
@@ -89,6 +93,9 @@ class RecursiveMutexObj : public virtual DCFObject, public virtual DCFLockable<D
     FRIEND_TEST( DCFLockableTest, recursiveMutexAssign );
     FRIEND_TEST( DCFLockableTest, recursiveMutexMove );
     
+    virtual const DCFHashCode hash() const {
+        return DCFObject::hash();
+    }
 }; // RecursiveMutexObj
 
 TEST_F( DCFLockableTest, recursiveMutexCopy ) {
