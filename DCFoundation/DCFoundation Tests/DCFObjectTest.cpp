@@ -23,7 +23,7 @@ public:
     virtual ~MyObject() {}
     
     virtual const DCFHashCode hash() const {
-        return ( std::hash<decltype(_foo)>()(_foo) );
+        return ( std::hash<decltype(_foo)>()(_foo) ) - 56;
     }
     
     MyObject & operator++() {
@@ -56,8 +56,8 @@ TEST_F( DCFObjectTest, debugDescription ) {
 
 
 TEST_F( DCFObjectTest, hashTest ) {
-    MyObject obj;
-    MyObject obj2;
+    MyObject * obj = new MyObject;
+    MyObject * obj2 = new MyObject;
     
     DCFHashCode one, two;
     
@@ -67,28 +67,30 @@ TEST_F( DCFObjectTest, hashTest ) {
     ASSERT_NE( one, two );
     
     
-    one = std::hash<decltype( obj )*>()(&obj);
-    two = std::hash<decltype( obj2 )*>()(&obj2);
+    one = std::hash<decltype( obj )>()( obj );
+    two = std::hash<decltype( obj2 )>()( obj2 );
     ASSERT_NE( one, two ) << "Hash codes shouldn't be equal because pointers are different!";
     
-    one = obj.hash();
-    two = obj.hash();
+    one = obj->hash();
+    two = obj->hash();
     ASSERT_EQ( one, two ) << "Hash codes should be equal because the objects are equivalent";
     
-    two = obj2.hash();
+    DCFHashable * h = dynamic_cast<DCFHashable *>( obj2 );
+    one = obj2->DCFHashable::hash();
+    two = h->hash();
     
     std::cout << one << " " << two << std::endl;
     
         // These two objects should be identical...
-    ASSERT_NE( &obj, &obj2 );
-    ASSERT_TRUE( obj == &obj ) << "Hash codes should be equal because the objects are equivalent";
-    ASSERT_TRUE( obj == &obj2 )  << "Hash codes should be equal because the objects are equivalent";
+    ASSERT_NE( obj, obj2 );
+    ASSERT_TRUE( *obj == obj ) << "Hash codes should be equal because the objects are equivalent";
+    ASSERT_TRUE( *obj == obj2 )  << "Hash codes should be equal because the objects are equivalent";
     
-    ++obj2;
-    two = obj2.hash();
+    ++*obj2;
+    two = obj2->hash();
     
-    ASSERT_FALSE( obj.hash() == obj2.hash() );
-    ASSERT_FALSE( obj == obj2 ) << "Objects should no longer be equivalent!";
+    ASSERT_FALSE( obj->hash() == obj2->hash() );
+    ASSERT_FALSE( *obj == *obj2 ) << "Objects should no longer be equivalent!";
 }
 
 DCF_TEST_NAMESPACE_END
