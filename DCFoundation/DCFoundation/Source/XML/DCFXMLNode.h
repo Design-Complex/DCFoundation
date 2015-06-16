@@ -39,6 +39,8 @@ protected:
     typeCode    _type   = INVALID;
     
 public:
+    virtual ~Node();
+    
     typeCode type() const;
     
 }; // Node
