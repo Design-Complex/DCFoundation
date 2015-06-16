@@ -17,7 +17,7 @@
 
 #include <DCFoundation/DCFMacros.h>
 #include <DCFoundation/DCFDefines.h>
-#include <DCFoundation/DCFPlatform.h>
+#include <DCFoundation/DCFSystem.h>
 #include <DCFoundation/DCFConcurrency.h>
 
 
