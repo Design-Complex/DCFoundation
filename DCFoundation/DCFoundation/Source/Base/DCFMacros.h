@@ -37,9 +37,13 @@
 
 #pragma mark - C++
 
+#if defined( __cplusplus )
+
 #define DCF_CPP98 ( __cplusplus >= 199711L )
 #define DCF_CPP11 ( __cplusplus >= 201103L )
 #define DCF_CPP14 ( __cplusplus >= 201402L )
+
+#endif // defined( __cplusplus )
 
 #if DCF_CPP11
 
@@ -69,6 +73,13 @@ DCFPrivateCopyAndAssign( TypeName )
 
 #endif // DCF_CPP11
 
+#define DCFDeclareAbstractDestructor( TypeName ) \
+public: \
+virtual ~TypeName() = 0;
+
+#define DCFDefineAbstractDestructor( TypeName ) \
+TypeName::~TypeName() {}
+
 #pragma mark - Namespace
 
 /** @def DCF_NAMESPACE_BEGIN
@@ -80,6 +91,9 @@ DCFPrivateCopyAndAssign( TypeName )
     @brief The closing declaration tag for the DCF Namespace. It must be included in all framework files after any types, classes, functions or variables are declared or defined.
  */
 #define DCF_NAMESPACE_END }
+
+#define DCF_NAMESPACE_DECLARE( x ) namespace x
+#define DCF_NAMESPACE_DEFINE( x ) DCF_NAMESPACE_DECLARE( x ) {
 
 #pragma mark - Compiler Macros
 
