@@ -9,9 +9,10 @@
 #ifndef _DCFLockable_
 #define _DCFLockable_
 
+/*! \file */
+
 #pragma mark - Includes
 
-#include <DCFoundation/DCFDefines.h>
 #include <DCFoundation/DCFMacros.h>
 
 #include <mutex>
@@ -21,12 +22,12 @@ DCF_NAMESPACE_BEGIN
 #pragma mark - Type Definitions
 
     /// A Mutex class
-using DCFMutex = std::mutex;
-using DCFRecursiveMutex = std::recursive_mutex;
+typedef std::mutex                          DCFMutex;
+typedef std::recursive_mutex                DCFRecursiveMutex;
 
     /// A Mutex guard
-using DCFMutexGuard = std::lock_guard<DCFMutex>;
-using DCFRecursiveMutexGuard = std::lock_guard<DCFRecursiveMutex>;
+typedef std::lock_guard<DCFMutex>           DCFMutexGuard;
+typedef std::lock_guard<DCFRecursiveMutex>  DCFRecursiveMutexGuard;
 
 #pragma mark - Forward Declarations
 
