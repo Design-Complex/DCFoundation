@@ -11,6 +11,18 @@
 #ifndef _DCFMacros_
 #define _DCFMacros_
 
+#ifndef __has_feature
+#   define __has_feature(x) 0
+#endif
+
+#ifndef __has_extension
+#   define __has_extension __has_feature
+#endif
+
+#ifndef __has_attribute
+#   define __has_attribute(x) 0
+#endif
+
 #pragma mark - C
 
 #define DCF_EXTERN extern
