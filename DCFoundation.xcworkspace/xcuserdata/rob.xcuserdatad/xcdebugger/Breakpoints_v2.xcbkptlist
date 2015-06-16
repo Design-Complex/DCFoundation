@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DCFoundation/DCFoundation/Source/Base/Interfaces/DCFLockable.h"
-            timestampString = "455048164.107184"
+            timestampString = "456165321.670535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "operator=( const DCFLockable&lt;LockType&gt; &amp;&amp; rhs )"
             landmarkType = "7">
             <Locations>

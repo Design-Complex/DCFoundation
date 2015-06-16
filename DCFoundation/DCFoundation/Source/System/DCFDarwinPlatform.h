@@ -11,6 +11,11 @@
 
 /*! \file */
 
+#define __DARWIN__
+
+#include <Availability.h>
+#include <AvailabilityMacros.h>
+#include <TargetConditionals.h>
 #include <DCFoundation/DCFPlatform.h>
 
 #endif // __DCFDarwinPlatform__

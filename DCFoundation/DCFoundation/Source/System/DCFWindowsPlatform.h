@@ -13,6 +13,7 @@
 
 #pragma mark - Includes
 
+#define __WINDOWS__
 #include <DCFoundation/DCFPlatform.h>
 
 #pragma mark - Macro Definitions

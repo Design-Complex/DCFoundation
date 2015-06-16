@@ -11,53 +11,20 @@
 
 /*! \file */
 
-#ifndef __has_feature
-#   define __has_feature(x) 0
-#endif
+#include <DCFoundation/DCFMacros.h>
 
-#ifndef __has_extension
-#   define __has_extension __has_feature
-#endif
+DCF_NAMESPACE_DEFINE( DCF )
 
-#ifndef __has_attribute
-#   define __has_attribute(x) 0
-#endif
+/** @namespace DCF::System
+ @brief DCFoundation headers and modules for System-level and non-portable code.
+ */
+DCF_NAMESPACE_DEFINE( System ) DCF_NAMESPACE_END
 
-#pragma mark - APPLE
+DCF_NAMESPACE_END
 
-#if !defined( __DARWIN__ )
+#define DCF_SYSTEM_NAMESPACE_BEGIN
 
-#if defined( __APPLE__ ) && defined( __MACH__ )
-
-#define __DARWIN__
-#include <Availability.h>
-#include <AvailabilityMacros.h>
-#include <TargetConditionals.h>
-#include <DCFoundation/DCFDarwinPlatform.h>
-
-#endif // defined( __APPLE__ )
-#endif // defined( __DARWIN__ )
-
-#pragma mark - UNIX
-
-#pragma mark - Windows
-
-#if !defined( __WINDOWS__ )
-
-#if defined( WIN32 ) || defined( _WIN32 ) || defined( __WIN32 ) || defined( __WIN32__ ) \
-|| defined( WIN64 ) || defined( _WIN64 ) || defined( __WIN64 ) || defined( __WIN64__ ) \
-|| defined( __MINGW32__ ) || defined( __MINGW64__ )
-
-#define __WINDOWS__
-#import <DCFoundation/DCFWindowsPlatform.h>
-
-#endif // defined( WIN32 )...
-#endif // defined( __WINDOWS__ )
-
-#if !defined( __DCFPlatform__ )
-
-#error "Unknown platform!"
-
-#endif // Unknown Platform
+#import <DCFoundation/DCFPlatform.h>
+#import <DCFoundation/DCFProcessInfo.h>
 
 #endif // __DCFSystem__

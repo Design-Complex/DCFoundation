@@ -36,16 +36,23 @@
 		D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF451AE061F9007240DA /* DCFoundationPriv.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF471AE061F9007240DA /* DCFDarwinPlatform.cpp */; };
 		D45EFF5D1AE061F9007240DA /* DCFDarwinPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF481AE061F9007240DA /* DCFDarwinPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D45EFF5F1AE061F9007240DA /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4A1AE061F9007240DA /* DCFLinuxPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D45EFF5F1AE061F9007240DA /* DCFLinuxPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4A1AE061F9007240DA /* DCFLinuxPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF601AE061F9007240DA /* DCFPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D45EFF4B1AE061F9007240DA /* DCFPlatform.cpp */; };
 		D45EFF611AE061F9007240DA /* DCFPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4C1AE061F9007240DA /* DCFPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45EFF621AE061F9007240DA /* DCFSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4D1AE061F9007240DA /* DCFSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46113261B1F4E270019775A /* DCFLockable.h in Headers */ = {isa = PBXBuildFile; fileRef = D46113251B1F4E270019775A /* DCFLockable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D46113271B1F53670019775A /* DCFLockableTest.cpp */; };
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
 		D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */; };
 		D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */; };
+		D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E971B305C8B00F5D458 /* DCFString.cpp */; };
+		D4A31E9A1B305C8B00F5D458 /* DCFString.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31E981B305C8B00F5D458 /* DCFString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */; };
+		D4A31E9E1B30610000F5D458 /* DCFProcessInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31E9C1B30610000F5D458 /* DCFProcessInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4A31EA11B3074B800F5D458 /* DCFHashable.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31EA01B3074B800F5D458 /* DCFHashable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4A31EA41B30755300F5D458 /* DCFMetaObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31EA21B30755300F5D458 /* DCFMetaObject.cpp */; };
+		D4A31EA51B30755300F5D458 /* DCFMetaObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31EA31B30755300F5D458 /* DCFMetaObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D900C51AF947840082CC7A /* DCFUtility.cpp */; };
 		D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D900C61AF947840082CC7A /* DCFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4FC9AAC1B0A494C00E6B56D /* libDCFoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */; };
@@ -131,6 +138,13 @@
 		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtilityTest.cpp; sourceTree = "<group>"; };
 		D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLRepresentation.h; sourceTree = "<group>"; };
+		D4A31E971B305C8B00F5D458 /* DCFString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFString.cpp; sourceTree = "<group>"; };
+		D4A31E981B305C8B00F5D458 /* DCFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFString.h; sourceTree = "<group>"; };
+		D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFProcessInfo.cpp; sourceTree = "<group>"; };
+		D4A31E9C1B30610000F5D458 /* DCFProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFProcessInfo.h; sourceTree = "<group>"; };
+		D4A31EA01B3074B800F5D458 /* DCFHashable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFHashable.h; sourceTree = "<group>"; };
+		D4A31EA21B30755300F5D458 /* DCFMetaObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFMetaObject.cpp; sourceTree = "<group>"; };
+		D4A31EA31B30755300F5D458 /* DCFMetaObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFMetaObject.h; sourceTree = "<group>"; };
 		D4C351891AC4A863003ECB09 /* libDCFoundation.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDCFoundation.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D900C51AF947840082CC7A /* DCFUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtility.cpp; sourceTree = "<group>"; };
 		D4D900C61AF947840082CC7A /* DCFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFUtility.h; sourceTree = "<group>"; };
@@ -227,12 +241,16 @@
 				D45EFF3B1AE061F9007240DA /* DCFDefines.h */,
 				D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */,
 				D45EFF3C1AE061F9007240DA /* DCFMacros.h */,
+				D4A31EA31B30755300F5D458 /* DCFMetaObject.h */,
+				D4A31EA21B30755300F5D458 /* DCFMetaObject.cpp */,
 				D45EFF3E1AE061F9007240DA /* DCFObject.h */,
 				D45EFF3D1AE061F9007240DA /* DCFObject.cpp */,
 				D45EFF411AE061F9007240DA /* DCFRTTI.h */,
 				D45EFF401AE061F9007240DA /* DCFRTTI.cpp */,
 				D4D900C61AF947840082CC7A /* DCFUtility.h */,
 				D4D900C51AF947840082CC7A /* DCFUtility.cpp */,
+				D4A31E981B305C8B00F5D458 /* DCFString.h */,
+				D4A31E971B305C8B00F5D458 /* DCFString.cpp */,
 				D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */,
 				6A02B86A1AEF0A5900D92050 /* Concurrency */,
 				D4806AEC1B16494900F3609C /* Interfaces */,
@@ -262,6 +280,8 @@
 				D45EFF491AE061F9007240DA /* DCFLinuxPlatform.cpp */,
 				D45EFF4F1AE061F9007240DA /* DCFWindowsPlatform.h */,
 				D45EFF4E1AE061F9007240DA /* DCFWindowsPlatform.cpp */,
+				D4A31E9C1B30610000F5D458 /* DCFProcessInfo.h */,
+				D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -269,8 +289,9 @@
 		D4806AEC1B16494900F3609C /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */,
 				D46113251B1F4E270019775A /* DCFLockable.h */,
+				D4A31EA01B3074B800F5D458 /* DCFHashable.h */,
+				D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -358,6 +379,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A31E9E1B30610000F5D458 /* DCFProcessInfo.h in Headers */,
 				D45EFF5D1AE061F9007240DA /* DCFDarwinPlatform.h in Headers */,
 				6ABC86AD1AD81D4C001D81AB /* (null) in Headers */,
 				D45EFF581AE061F9007240DA /* DCFRTTI.h in Headers */,
@@ -373,9 +395,11 @@
 				D4FF6DE51B2F16C100161909 /* DCFXMLAttributeList.h in Headers */,
 				D4FF6DE71B2F16E900161909 /* DCFXMLBase.h in Headers */,
 				D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */,
+				D4A31EA11B3074B800F5D458 /* DCFHashable.h in Headers */,
 				D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */,
 				D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */,
 				7CD7DC261B2B34F90019313A /* DCFXML.h in Headers */,
+				D4A31EA51B30755300F5D458 /* DCFMetaObject.h in Headers */,
 				6ABC86B11AD81D97001D81AB /* (null) in Headers */,
 				6A02B86E1AEF0ACA00D92050 /* DCFConcurrency.h in Headers */,
 				6ABC86961AD81AF3001D81AB /* (null) in Headers */,
@@ -387,6 +411,7 @@
 				D45EFF551AE061F9007240DA /* DCFObject.h in Headers */,
 				D45EFF611AE061F9007240DA /* DCFPlatform.h in Headers */,
 				6ABC869A1AD81B9E001D81AB /* (null) in Headers */,
+				D4A31E9A1B305C8B00F5D458 /* DCFString.h in Headers */,
 				D46113261B1F4E270019775A /* DCFLockable.h in Headers */,
 				6ABC86A21AD81C7D001D81AB /* (null) in Headers */,
 				7CD7DC2C1B2B35850019313A /* DCFXMLSAX.h in Headers */,
@@ -489,9 +514,12 @@
 				D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */,
 				D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */,
 				6A02B86D1AEF0ACA00D92050 /* DCFConcurrency.cpp in Sources */,
+				D4A31EA41B30755300F5D458 /* DCFMetaObject.cpp in Sources */,
 				D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */,
 				D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */,
 				D4FF6DEB1B2F1C2800161909 /* DCFXMLAttribute.cpp in Sources */,
+				D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */,
+				D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */,
 				D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
