@@ -11,7 +11,7 @@
 
 /*! \file */
 
-#include <DCFoundation/DCFBase.h>
+#include <DCFoundation/DCFLockable.h>
 
 #define DCFSingletonDeclare( TypeName ) \
 private: \
