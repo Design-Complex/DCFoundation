@@ -10,6 +10,8 @@
 #define _DCFDefines_
 
 #include <cstddef>
+#include <cstdint>
+#include <limits>
 
 /*! \file */
 
