@@ -14,8 +14,9 @@
 #include <DCFoundation/DCFLockable.h>
 
 #define DCFSingletonDeclare( TypeName ) \
-private: \
-DCFPrivateConstructors( TypeName ); \
+protected: \
+TypeName(); \
+DCFPrivateCopyAndAssign( TypeName ); \
 static TypeName * _sharedInstance; \
 static DCF::DCFMutex _lock; \
 public: \
