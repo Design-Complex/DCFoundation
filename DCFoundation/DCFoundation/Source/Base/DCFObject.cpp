@@ -14,7 +14,7 @@
 
 DCF_NAMESPACE_BEGIN
 
-DCFDefineAbstractDestructor( DCFObject );
+DCFDefineAbstractDestructor( Object );
 DCFDefineAbstractDestructor( DCFHashable );
 
 #pragma mark - DCFHashable Implementation

@@ -25,23 +25,24 @@ DCF_NAMESPACE_BEGIN
  @brief An abstract base class that all public DCFObjects inherit from.
  @namespace DCF
  */
-class DCF_VISIBLE DCFObject : public virtual DCFMetaObject, public virtual DCFHashable {
-    DCFDeclareAbstractDestructor( DCFObject );
+class DCF_VISIBLE Object : public virtual DCFMetaObject, public virtual DCFHashable {
+    DCFDeclareAbstractDestructor( Object );
     
 public:
     
 #pragma mark Comparison Operators
         /// Returns true if the classes are equal
-    virtual bool operator ==( const DCFObject & rhs ) const;
+    virtual bool operator ==( const Object & rhs ) const;
     
         /// Returns true if the classes are not equal. The default implementation calls !(operator==).
-    virtual bool operator !=( const DCFObject & rhs ) const;
+    virtual bool operator !=( const Object & rhs ) const;
+    
     
         /// Returns true if the pointers to both objects are equal. If they are *equivalent* meaning the hash codes are the same, this also returns true. If this is not desired behavior, subclasses SHOULD override this method.
-    virtual bool operator ==( const DCFObject * rhs ) const;
+    virtual bool operator ==( const Object * rhs ) const;
     
         /// Returns true only if the hash values of the two pointers is not equal.
-    virtual bool operator !=( const DCFObject * rhs ) const;
+    virtual bool operator !=( const Object * rhs ) const;
     
     
 #pragma mark DCFHashable Declarations
@@ -51,5 +52,7 @@ public:
 }; // class DCFObject
 
 DCF_NAMESPACE_END
+
+typedef DCF::Object     DCFObject;
 
 #endif // __DCFObject__
