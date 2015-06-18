@@ -9,6 +9,9 @@
 #ifndef __DCFPlatform__
 #define __DCFPlatform__
 
+#include <DCFoundation/DCFMacros.h>
+#include <DCFoundation/DCFDefines.h>
+
 #pragma mark - APPLE
 
 #if !defined( __DARWIN__ )
@@ -39,12 +42,20 @@
 
 DCF_NAMESPACE_DEFINE( DCF ) DCF_NAMESPACE_DEFINE( System )
 
-class DCFPlatform  {
-    DCFSingletonDeclare( DCFPlatform );
-        //DCFAbstractDestructor( DCFPlatform );
+#pragma mark - Class Declaration
+
+class DCF_VISIBLE Platform  {
+        DCFSingletonDeclare( Platform );
+    
+public:
+    virtual size_t numberOfCores() const = 0;
 };
 
 DCF_NAMESPACE_END DCF_NAMESPACE_END
+
+#pragma mark Concrete Type Declarations
+
+typedef DCF::System::Platform DCFPlatform;
 
 #if defined( __DARWIN__ )
 

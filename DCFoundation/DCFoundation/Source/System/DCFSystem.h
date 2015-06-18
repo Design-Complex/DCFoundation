@@ -22,8 +22,6 @@ DCF_NAMESPACE_DEFINE( System ) DCF_NAMESPACE_END
 
 DCF_NAMESPACE_END
 
-#define DCF_SYSTEM_NAMESPACE_BEGIN
-
 #import <DCFoundation/DCFPlatform.h>
 #import <DCFoundation/DCFProcessInfo.h>
 
