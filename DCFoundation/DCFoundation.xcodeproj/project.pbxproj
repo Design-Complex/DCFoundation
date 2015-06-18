@@ -46,6 +46,13 @@
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
 		D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */; };
 		D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */; };
+		D4939F2B1B331327005553BF /* DCFMetaClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F291B331327005553BF /* DCFMetaClass.cpp */; };
+		D4939F2C1B331327005553BF /* DCFMetaClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D4939F2A1B331327005553BF /* DCFMetaClass.h */; };
+		D4939F2F1B331345005553BF /* DCFMetaClassBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F2D1B331344005553BF /* DCFMetaClassBase.cpp */; };
+		D4939F301B331345005553BF /* DCFMetaClassBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D4939F2E1B331345005553BF /* DCFMetaClassBase.h */; };
+		D4939F331B331CCA005553BF /* DCFSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F311B331CCA005553BF /* DCFSymbol.cpp */; };
+		D4939F341B331CCA005553BF /* DCFSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = D4939F321B331CCA005553BF /* DCFSymbol.h */; };
+		D4939F361B3331C4005553BF /* DCFPlatformTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */; };
 		D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E971B305C8B00F5D458 /* DCFString.cpp */; };
 		D4A31E9A1B305C8B00F5D458 /* DCFString.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31E981B305C8B00F5D458 /* DCFString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */; };
@@ -138,6 +145,13 @@
 		D4617F0D1AE06C56009B092C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFUtilityTest.cpp; sourceTree = "<group>"; };
 		D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLRepresentation.h; sourceTree = "<group>"; };
+		D4939F291B331327005553BF /* DCFMetaClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFMetaClass.cpp; sourceTree = "<group>"; };
+		D4939F2A1B331327005553BF /* DCFMetaClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFMetaClass.h; sourceTree = "<group>"; };
+		D4939F2D1B331344005553BF /* DCFMetaClassBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFMetaClassBase.cpp; sourceTree = "<group>"; };
+		D4939F2E1B331345005553BF /* DCFMetaClassBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFMetaClassBase.h; sourceTree = "<group>"; };
+		D4939F311B331CCA005553BF /* DCFSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFSymbol.cpp; sourceTree = "<group>"; };
+		D4939F321B331CCA005553BF /* DCFSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFSymbol.h; sourceTree = "<group>"; };
+		D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFPlatformTest.cpp; sourceTree = "<group>"; };
 		D4A31E971B305C8B00F5D458 /* DCFString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFString.cpp; sourceTree = "<group>"; };
 		D4A31E981B305C8B00F5D458 /* DCFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFString.h; sourceTree = "<group>"; };
 		D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFProcessInfo.cpp; sourceTree = "<group>"; };
@@ -241,6 +255,10 @@
 				D45EFF3B1AE061F9007240DA /* DCFDefines.h */,
 				D45EFF3A1AE061F9007240DA /* DCFDefines.cpp */,
 				D45EFF3C1AE061F9007240DA /* DCFMacros.h */,
+				D4939F2E1B331345005553BF /* DCFMetaClassBase.h */,
+				D4939F2D1B331344005553BF /* DCFMetaClassBase.cpp */,
+				D4939F2A1B331327005553BF /* DCFMetaClass.h */,
+				D4939F291B331327005553BF /* DCFMetaClass.cpp */,
 				D4A31EA31B30755300F5D458 /* DCFMetaObject.h */,
 				D4A31EA21B30755300F5D458 /* DCFMetaObject.cpp */,
 				D45EFF3E1AE061F9007240DA /* DCFObject.h */,
@@ -251,6 +269,8 @@
 				D4D900C51AF947840082CC7A /* DCFUtility.cpp */,
 				D4A31E981B305C8B00F5D458 /* DCFString.h */,
 				D4A31E971B305C8B00F5D458 /* DCFString.cpp */,
+				D4939F321B331CCA005553BF /* DCFSymbol.h */,
+				D4939F311B331CCA005553BF /* DCFSymbol.cpp */,
 				D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */,
 				6A02B86A1AEF0A5900D92050 /* Concurrency */,
 				D4806AEC1B16494900F3609C /* Interfaces */,
@@ -358,6 +378,7 @@
 				D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */,
 				D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */,
 				D46113271B1F53670019775A /* DCFLockableTest.cpp */,
+				D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */,
 				D4FC9AA81B0A494C00E6B56D /* Supporting Files */,
 			);
 			path = "DCFoundation Tests";
@@ -390,6 +411,7 @@
 				D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */,
 				D4FF6DE91B2F19CE00161909 /* DCFXMLAttribute.h in Headers */,
 				6ABC86A91AD81D33001D81AB /* (null) in Headers */,
+				D4939F341B331CCA005553BF /* DCFSymbol.h in Headers */,
 				D45EFF521AE061F9007240DA /* DCFDefines.h in Headers */,
 				D45EFF501AE061F9007240DA /* DCFBase.h in Headers */,
 				D4FF6DE51B2F16C100161909 /* DCFXMLAttributeList.h in Headers */,
@@ -404,6 +426,7 @@
 				6A02B86E1AEF0ACA00D92050 /* DCFConcurrency.h in Headers */,
 				6ABC86961AD81AF3001D81AB /* (null) in Headers */,
 				D45EFF5F1AE061F9007240DA /* DCFLinuxPlatform.h in Headers */,
+				D4939F301B331345005553BF /* DCFMetaClassBase.h in Headers */,
 				D45EFF641AE061F9007240DA /* DCFWindowsPlatform.h in Headers */,
 				D45EFF531AE061F9007240DA /* DCFMacros.h in Headers */,
 				6ABC86B51AD81DD5001D81AB /* (null) in Headers */,
@@ -414,6 +437,7 @@
 				D4A31E9A1B305C8B00F5D458 /* DCFString.h in Headers */,
 				D46113261B1F4E270019775A /* DCFLockable.h in Headers */,
 				6ABC86A21AD81C7D001D81AB /* (null) in Headers */,
+				D4939F2C1B331327005553BF /* DCFMetaClass.h in Headers */,
 				7CD7DC2C1B2B35850019313A /* DCFXMLSAX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,13 +535,16 @@
 			files = (
 				D45EFF601AE061F9007240DA /* DCFPlatform.cpp in Sources */,
 				D44165441B2F390D0035B982 /* DCFXMLNode.cpp in Sources */,
+				D4939F331B331CCA005553BF /* DCFSymbol.cpp in Sources */,
 				D45EFF5C1AE061F9007240DA /* DCFDarwinPlatform.cpp in Sources */,
+				D4939F2B1B331327005553BF /* DCFMetaClass.cpp in Sources */,
 				D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */,
 				6A02B86D1AEF0ACA00D92050 /* DCFConcurrency.cpp in Sources */,
 				D4A31EA41B30755300F5D458 /* DCFMetaObject.cpp in Sources */,
 				D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */,
 				D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */,
 				D4FF6DEB1B2F1C2800161909 /* DCFXMLAttribute.cpp in Sources */,
+				D4939F2F1B331345005553BF /* DCFMetaClassBase.cpp in Sources */,
 				D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */,
 				D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */,
 				D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */,
@@ -532,6 +559,7 @@
 				D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */,
 				D4FC9AB31B0A49D800E6B56D /* DCFGoogleTestAdaptor.mm in Sources */,
 				D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */,
+				D4939F361B3331C4005553BF /* DCFPlatformTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

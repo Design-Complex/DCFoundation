@@ -14,37 +14,43 @@
 
 DCF_NAMESPACE_BEGIN DCF_XML_NAMESPACE_BEGIN
 
-class Node : public virtual DCF::DCFObject {
+typedef enum : size_t {
+    INVALID                 = 0,
+    DOCUMENT                = 1,
+    ELEMENT                 = 2,
+    ATTRIBUTE               = 3,
+    PROCESSING_INSTRUCTION  = 4,
+    COMMENT                 = 5,
+    TEXT                    = 6,
+    CDATA                   = 7,
+    DOCUMENT_FRAGMENT       = 8,
+    ENTITY                  = 9,
+    ENTITY_REFERENCE        = 10,
+    DOCUMENT_TYPE           = 11,
+    WHITESPACE              = 12,
+    NOTATION                = 13,
+    ELEMENT_TYPE            = 14,
+    ATTRIBUTE_LIST          = 15
+} NodeTypeID;
+
+class Node : public virtual DCFObject {
 public:
-    typedef enum : size_t {
-        INVALID                 = 0,
-        DOCUMENT                = 1,
-        ELEMENT                 = 2,
-        ATTRIBUTE               = 3,
-        PROCESSING_INSTRUCTION  = 4,
-        COMMENT                 = 5,
-        TEXT                    = 6,
-        CDATA                   = 7,
-        DOCUMENT_FRAGMENT       = 8,
-        ENTITY                  = 9,
-        ENTITY_REFERENCE        = 10,
-        DOCUMENT_TYPE           = 11,
-        WHITESPACE              = 12,
-        NOTATION                = 13,
-        ELEMENT_TYPE            = 14,
-        ATTRIBUTE_LIST          = 15
-    } typeCode;
+    
     
 protected:
-    typeCode    _type   = INVALID;
+    NodeTypeID    _type   = INVALID;
     
 public:
     virtual ~Node();
     
-    typeCode type() const;
+    NodeTypeID type() const;
     
 }; // Node
 
 DCF_XML_NAMESPACE_END DCF_NAMESPACE_END
+
+typedef DCF::XML::Node          DCFXMLNode;
+typedef DCF::XML::Node *        DCFXMLNodeRef;
+typedef DCF::XML::NodeTypeID    DCFXMLNodeTypeID;
 
 #endif // _DCFXMLNode_

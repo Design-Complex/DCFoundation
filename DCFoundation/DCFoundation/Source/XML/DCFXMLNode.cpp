@@ -10,7 +10,7 @@
 
 DCF_NAMESPACE_BEGIN DCF_XML_NAMESPACE_BEGIN
 
-Node::typeCode Node::type() const {
+DCFXMLNodeTypeID DCFXMLNode::type() const {
     return _type;
 }
 
