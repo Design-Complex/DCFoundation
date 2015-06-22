@@ -36,28 +36,9 @@
 #endif // defined( WIN32 )...
 #endif // defined( __WINDOWS__ )
 
-#include <DCFoundation/DCFSingleton.h>
-
-/*! \file */
-
-DCF_NAMESPACE_DEFINE( DCF ) DCF_NAMESPACE_DEFINE( System )
-
-#pragma mark - Class Declaration
-
-class DCF_VISIBLE Platform  {
-        DCFSingletonDeclare( Platform );
-    
-public:
-    virtual size_t numberOfCores() const = 0;
-};
-
-DCF_NAMESPACE_END DCF_NAMESPACE_END
-
-#pragma mark Concrete Type Declarations
-
-typedef DCF::System::Platform DCFPlatform;
-
 #if defined( __DARWIN__ )
+
+#define USE_COREFOUNDATION
 
 #include <DCFoundation/DCFDarwinPlatform.h>
 
@@ -66,11 +47,12 @@ typedef DCF::System::Platform DCFPlatform;
 #include <DCFoundation/DCFWindowsPlatform.h>
 
 #elif defined( __LINUX__ )
+
 #include <DCFoundation/DCFLinuxPlatform.h>
 
 #else
 
-#error "Unknown platform!"
+#warning "Unknown Platform"
 
 #endif // Platforms
 

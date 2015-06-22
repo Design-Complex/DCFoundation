@@ -15,6 +15,7 @@
 
 #include <DCFoundation/DCFMetaObject.h>
 #include <DCFoundation/DCFHashable.h>
+#include <atomic>
 
 DCF_NAMESPACE_BEGIN
 
@@ -28,7 +29,24 @@ DCF_NAMESPACE_BEGIN
 class DCF_VISIBLE Object : public virtual DCFMetaObject, public virtual DCFHashable {
     DCFDeclareAbstractDestructor( Object );
     
+private:
+    std::atomic<size_t>      _retainCount   = ATOMIC_VAR_INIT( 0 );
+    
+protected:
+    static void * operator new( size_t size );
+    static void operator delete( void * mem );
+        //static Object * alloc();
+    
+        // The default initializer. Subclasses MUST override this method, and should call this method FIRST by default.
+    virtual Object * init() = 0;
+    
 public:
+    
+#pragma mark Object Lifetime
+    
+    virtual size_t retainCount() const;
+    virtual Object * retain();
+    virtual Object * release();
     
 #pragma mark Comparison Operators
         /// Returns true if the classes are equal
@@ -36,7 +54,6 @@ public:
     
         /// Returns true if the classes are not equal. The default implementation calls !(operator==).
     virtual bool operator !=( const Object & rhs ) const;
-    
     
         /// Returns true if the pointers to both objects are equal. If they are *equivalent* meaning the hash codes are the same, this also returns true. If this is not desired behavior, subclasses SHOULD override this method.
     virtual bool operator ==( const Object * rhs ) const;

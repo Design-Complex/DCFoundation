@@ -10,7 +10,7 @@
 #define _DCFMetaObject_
 
 #include <DCFoundation/DCFMacros.h>
-
+#include <DCFoundation/DCFPlatform.h>
 #include <string>
 #include <vector>
 

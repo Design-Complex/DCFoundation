@@ -7,3 +7,19 @@
 //
 
 #include "DCFHost.h"
+#include "DCFConcurrency.h"
+#include <cstdlib>
+
+bool  DCFHost::hasCommandProcessor() const {
+    return ( std::system( nullptr ) );
+}
+
+int DCFHost::runSystemCommand( const char * cmd ) {
+    int result = EXIT_SUCCESS;
+    std::thread t( [&result,cmd]{
+        result = std::system( cmd );
+    });
+    t.join();
+    
+    return result;
+}

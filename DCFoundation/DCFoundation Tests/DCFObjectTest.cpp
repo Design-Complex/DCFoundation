@@ -26,6 +26,8 @@ public:
         return ( std::hash<decltype(_foo)>()(_foo) ) - 56;
     }
     
+    virtual MyObject * init() { return this->DCFObject::init(); }
+    
     MyObject & operator++() {
         ++_foo;
         

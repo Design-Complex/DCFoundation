@@ -20,4 +20,13 @@
  */
 namespace DCF {}
 
+    ///
+extern const char *    kPlatformCurrentKey;
+
+#define DCF_USE_STD_STRING 1
+
+#define DCFGenericStringType            std::shared_ptr<std::string>
+#define DCFPlatformStringType           DCFGenericStringType
+#define DCFPlatformMutableStringType    DCFGenericStringType
+
 #endif // _DCFDefines_
