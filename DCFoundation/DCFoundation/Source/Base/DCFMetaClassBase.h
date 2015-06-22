@@ -27,10 +27,10 @@ DCF_NAMESPACE_BEGIN
 
 #pragma mark Forward Declarations
 
-class DCFMetaClass;
-class DCFObject;
-class DCFString;
-class DCFSymbol;
+class MetaClass;
+class Object;
+class String;
+class Symbol;
 
 #pragma mark Type Definitions
 
@@ -112,14 +112,14 @@ protected:
     
 #pragma mark RTTI
 public:
-    virtual const DCFMetaClass * metaClass() const = 0;
+    virtual const MetaClass * metaClass() const = 0;
     
-    MetaClassBase * metaCast( const DCFMetaClass * toClass ) const;
-    MetaClassBase * metaCast( const DCFSymbol * toClass ) const;
-    MetaClassBase * metaCast( const DCFString * toClass ) const;
+    MetaClassBase * metaCast( const MetaClass * toClass ) const;
+    MetaClassBase * metaCast( const Symbol * toClass ) const;
+    MetaClassBase * metaCast( const String * toClass ) const;
     MetaClassBase * metaCast( const char * toClass ) const;
     
-    static MetaClassBase * safeMetaCast( const MetaClassBase * fromClass = nullptr, const DCFMetaClass * toClass = nullptr );
+    static MetaClassBase * safeMetaCast( const MetaClassBase * fromClass = nullptr, const MetaClass * toClass = nullptr );
     
     static bool checkTypeInstance( const MetaClassBase * instance, const MetaClassBase * typeInstance );
     
