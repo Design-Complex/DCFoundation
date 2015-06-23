@@ -20,6 +20,7 @@ class MutexObj : public virtual DCFObject, public virtual DCFLockable<DCFMutex> 
     FRIEND_TEST( DCFLockableTest, mutexAssign );
     FRIEND_TEST( DCFLockableTest, mutexMove );
     
+    virtual MutexObj * init() { this->DCFObject::init(); return this; }
     
     virtual const DCFHashCode hash() const {
         return DCFObject::hash();

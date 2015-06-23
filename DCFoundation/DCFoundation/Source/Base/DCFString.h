@@ -18,6 +18,7 @@
 #pragma mark Includes
 
 #include <DCFoundation/DCFObject.h>
+#include <DCFoundation/DCFStringEncodings.h>
 #include <string>
 
 DCF_NAMESPACE_BEGIN
@@ -34,20 +35,14 @@ DCF_NAMESPACE_BEGIN
  * @discussion FILL ME IN
  */
 
-class DCF_VISIBLE String : public virtual DCFObject {
-public:
-    typedef enum : uint64_t {
-        kDCFStringASCIIEncoding     = 0,
-        kDCFStringUTF8Encoding,
-        kDCFStringUTF16Encoding,
-        kDCFStringUTF32Encoding
-    } Encoding;
+class DCF_VISIBLE String : public DCFObject {
     
 #pragma mark - Instance Variables
 private:
     
 protected:
-    DCFPlatformStringType _storage   = nullptr;
+    DCFPlatformStringType   _storage    = nullptr;
+    DCFStringEncoding       _encoding   = kDCFStringEncodingUTF8;
     
     String();
     String( const char * str );
@@ -61,7 +56,7 @@ protected:
     virtual String * initWithCString( const char * cstring );
     virtual String * initWithCStringNoCopy( const char * cstring );
     virtual String * initWithCStringOfLength( const char * cstring, size_t length );
-    virtual String * initWithBytes( const uint8_t * buffer, size_t length, Encoding encoding );
+    virtual String * initWithBytes( const uint8_t * buffer, size_t length, DCFStringEncoding encoding );
     
 public:
     virtual ~String();
@@ -72,7 +67,7 @@ public:
     static String * withCString( const char * cstr );
     static String * withCStringNoCopy( const char * cstr );
     static String * withCStringOfLength( const char * cstr, size_t length );
-    static String * withBytes( const uint8_t * buffer, size_t length, Encoding encoding );
+    static String * withBytes( const uint8_t * buffer, size_t length, DCFStringEncoding encoding );
     
     DCFPlatformStringType platformString() const;
     
@@ -83,6 +78,5 @@ DCF_NAMESPACE_END
 #pragma mark Concrete Type Declarations
 
 typedef DCF::String             DCFString;
-typedef DCF::String::Encoding   DCFStringEncoding;
 
 #endif // _DCFString_

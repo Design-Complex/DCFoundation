@@ -10,6 +10,7 @@
 #include "DCFConcurrency.h"
 #include "DCFHost.h"
 #include "DCFString.h"
+#include <CoreFoundation/CFString.h>
 #include <sys/sysctl.h>
 
 static const char * kSysCTLActiveCPUKey     = "hw.activecpu";
@@ -30,7 +31,26 @@ size_t DCFHost::numberOfCores() const {
 
 #pragma mark - DCFString
 
-#if !defined( DCF_USE_STD_STRING )
+#if defined( USE_COREFOUNDATION )
+
+const DCFStringEncoding kDCFStringEncodingMacRoman          = kCFStringEncodingMacRoman;
+const DCFStringEncoding kDCFStringEncodingWindowsLatin1     = kCFStringEncodingWindowsLatin1;
+const DCFStringEncoding kDCFStringEncodingISOLatin1         = kCFStringEncodingISOLatin1;
+const DCFStringEncoding kDCFStringEncodingNextStepLatin     = kCFStringEncodingNextStepLatin;
+const DCFStringEncoding kDCFStringEncodingASCII             = kCFStringEncodingASCII;
+const DCFStringEncoding kDCFStringEncodingUnicode           = kCFStringEncodingUnicode;
+const DCFStringEncoding kDCFStringEncodingUTF8              = kCFStringEncodingUTF8;
+const DCFStringEncoding kDCFStringEncodingNonLossyASCII     = kCFStringEncodingNonLossyASCII;
+const DCFStringEncoding kDCFStringEncodingUTF16             = kCFStringEncodingUTF16;
+const DCFStringEncoding kDCFStringEncodingUTF16BE           = kCFStringEncodingUTF16BE;
+const DCFStringEncoding kDCFStringEncodingUTF16LE           = kCFStringEncodingUTF16LE;
+const DCFStringEncoding kDCFStringEncodingUTF32             = kCFStringEncodingUTF32;
+const DCFStringEncoding kDCFStringEncodingUTF32BE           = kCFStringEncodingUTF32BE;
+const DCFStringEncoding kDCFStringEncodingUTF32LE           = kCFStringEncodingUTF32LE;
+
+DCFString::String() {
+    
+}
 
 DCFString::~String() {
             if( _storage )
@@ -39,7 +59,7 @@ DCFString::~String() {
 
 DCFString * DCFString::init() {
     if( this->DCFObject::init() ) {
-            // NULL String
+        _storage = CFSTR("");
     }
     
     return this;
@@ -47,7 +67,7 @@ DCFString * DCFString::init() {
 
 DCFString * DCFString::initWithString( const DCFString * string ) {
     if( this->DCFObject::init() ) {
-        _storage = CFRetain( string->_storage );
+        _storage = ( CFStringRef )CFRetain( string->_storage );
     }
     
     return this;
@@ -82,20 +102,11 @@ DCFString * DCFString::initWithCStringOfLength( const char * string, size_t leng
     return this;
 }
 
-DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, Encoding encoding ) {
-    if( this->DCFObject::init() ) {
-        switch ( encoding ) {
-            case kDCFStringUTF32Encoding:
-            case kDCFStringUTF16Encoding:
-            case kDCFStringUTF8Encoding:
-                delete this;
-                
-                break;
-            case kDCFStringASCIIEncoding:
-            default:
-                _storage = DCFPlatformStringType( new std::string( ( const char * )buffer, length ) );
-        }
-        
+DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, DCFStringEncoding encoding ) {
+    if( this->DCFObject::init() ) {        
+        _storage = CFStringCreateWithBytes( NULL, buffer, ( CFIndex )length, encoding, false );
+        if( !_storage )
+            delete this;
     }
     
     return this;

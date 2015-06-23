@@ -7,7 +7,7 @@
 //
 
 #include "DCFTesting.h"
-#include <DCFoundation/DCFPlatform.h>
+#include <DCFoundation/DCFSystem.h>
 
 DCF_TEST_NAMESPACE_BEGIN
 
@@ -16,9 +16,9 @@ class DCFPlatformTest : public ::testing::Test {
 };
 
 TEST_F( DCFPlatformTest, singleton ) {
-    DCFPlatform & platform = DCFPlatform::sharedInstance();
-    
-    ASSERT_TRUE( platform.numberOfCores() > 0 ) << "Couldn't get the correct number of cores!";
+//    DCFHost & host = DCFHost::sharedInstance();
+//    
+//    ASSERT_TRUE( host.numberOfCores() > 0 ) << "Couldn't get the correct number of cores!";
 }
 
 DCF_TEST_NAMESPACE_END

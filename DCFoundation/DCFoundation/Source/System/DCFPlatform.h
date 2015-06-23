@@ -38,7 +38,8 @@
 
 #if defined( __DARWIN__ )
 
-#define USE_COREFOUNDATION
+//#define USE_COREFOUNDATION 1
+//#undef DCF_USE_STD_STRING
 
 #include <DCFoundation/DCFDarwinPlatform.h>
 

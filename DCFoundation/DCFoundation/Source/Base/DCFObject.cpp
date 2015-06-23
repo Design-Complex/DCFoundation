@@ -30,7 +30,6 @@ void * DCFObject::operator new( size_t size ) {
 }
 
 void DCFObject::operator delete( void * mem ) {
-    
     free( mem );
 }
 

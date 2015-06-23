@@ -10,6 +10,21 @@
 
 #if DCF_USE_STD_STRING
 
+const DCFStringEncoding kDCFStringEncodingMacRoman          = 0;
+const DCFStringEncoding kDCFStringEncodingWindowsLatin1     = 1;
+const DCFStringEncoding kDCFStringEncodingISOLatin1         = 2;
+const DCFStringEncoding kDCFStringEncodingNextStepLatin     = 3;
+const DCFStringEncoding kDCFStringEncodingASCII             = 4;
+const DCFStringEncoding kDCFStringEncodingUnicode           = 5;
+const DCFStringEncoding kDCFStringEncodingUTF8              = 6;
+const DCFStringEncoding kDCFStringEncodingNonLossyASCII     = 7;
+const DCFStringEncoding kDCFStringEncodingUTF16             = 8;
+const DCFStringEncoding kDCFStringEncodingUTF16BE           = 9;
+const DCFStringEncoding kDCFStringEncodingUTF16LE           = 10;
+const DCFStringEncoding kDCFStringEncodingUTF32             = 11;
+const DCFStringEncoding kDCFStringEncodingUTF32BE           = 12;
+const DCFStringEncoding kDCFStringEncodingUTF32LE           = 13;
+
 DCFString::String() {
     
 }
@@ -60,19 +75,11 @@ DCFString * DCFString::initWithCStringOfLength( const char * string, size_t leng
     return this;
 }
 
-DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, Encoding encoding ) {
+DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, DCFStringEncoding encoding ) {
     if( this->DCFObject::init() ) {
-        switch ( encoding ) {
-            case kDCFStringUTF32Encoding:
-            case kDCFStringUTF16Encoding:
-            case kDCFStringUTF8Encoding:
-                delete this;
-                
-                break;
-            case kDCFStringASCIIEncoding:
-            default:
-                _storage = DCFPlatformStringType( new std::string( ( const char * )buffer, length ) );
-        }
+            // TODO: Fill me in!
+        
+                        _storage = DCFPlatformStringType( new std::string( ( const char * )buffer, length ) );
 
     }
     
