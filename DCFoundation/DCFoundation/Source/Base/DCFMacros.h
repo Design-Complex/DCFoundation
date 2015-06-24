@@ -74,7 +74,6 @@ DCFPrivateCopyAndAssign( TypeName )
 #endif // DCF_CPP11
 
 #define DCFDeclareAbstractDestructor( TypeName ) \
-public: \
 virtual ~TypeName() = 0;
 
 #define DCFDefineAbstractDestructor( TypeName ) \
