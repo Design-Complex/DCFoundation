@@ -25,8 +25,8 @@ const DCFStringEncoding kDCFStringEncodingUTF32             = 11;
 const DCFStringEncoding kDCFStringEncodingUTF32BE           = 12;
 const DCFStringEncoding kDCFStringEncodingUTF32LE           = 13;
 
-DCFString::String() {
-    
+DCFString::String() : _storage( /* default */ ) {
+    this->init();
 }
 
 DCFString::~String() {
@@ -36,7 +36,7 @@ DCFString::~String() {
 
 DCFString * DCFString::init() {
     if( this->DCFObject::init() ) {
-            // NULL String
+        _storage.reset( new std::string( "" ) );
     }
     
     return this;
@@ -86,6 +86,13 @@ DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, DCF
     return this;
 }
 
+const DCFHashCode DCFString::hash() const {
+    auto str = ( _storage ) ? _storage.get() : nullptr;
+    
+    
+    return std::hash<decltype(str)>()( this );
+}
+
 #endif // USE_STD_STRING
 
 DCFString * DCFString::withString( const DCFString * string ) {
@@ -128,6 +135,3 @@ DCFString * DCFString::withBytes( const uint8_t * buffer, size_t length, DCFStri
     return output;
 }
 
-const DCFHashCode DCFString::hash() const {
-    return std::hash<decltype(this)>()( this );
-}

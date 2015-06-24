@@ -22,13 +22,13 @@
 
 #pragma mark Concrete Type Definitions
 
-#if defined( USE_COREFOUNDATION ) && defined( DCF_USE_STD_STRING )
+#if defined( DCF_USE_COREFOUNDATION ) && defined( DCF_USE_STD_STRING )
 
 #error "Both CoreFoundation and std::string specified!"
 
 #endif
 
-#if defined( USE_COREFOUNDATION )
+#if defined( DCF_USE_COREFOUNDATION )
 
 #include <CoreFoundation/CFString.h>
 
@@ -44,6 +44,6 @@ typedef DCFGenericStringType    DCFPlatformMutableStringType;
 
 #error "No String Type has been defined!"
 
-#endif // USE_COREFOUNDATION
+#endif // DCF_USE_COREFOUNDATION
 
 #endif // __DCFDarwinPlatform__

@@ -19,6 +19,8 @@ using DCFTypeDictionary = std::map<const char *,std::string>;
 static DCFMutex * _typeLock;
 static DCFTypeDictionary * _types;
 
+DCF_LIBRARY_INITIALIZER void DCFInitMetaObject();
+
 DCF_LIBRARY_INITIALIZER void DCFInitMetaObject() {
     static std::once_flag __initMetaObject;
     std::call_once( __initMetaObject, [](){

@@ -31,7 +31,7 @@ size_t DCFHost::numberOfCores() const {
 
 #pragma mark - DCFString
 
-#if defined( USE_COREFOUNDATION )
+#if defined( DCF_USE_COREFOUNDATION )
 
 const DCFStringEncoding kDCFStringEncodingMacRoman          = kCFStringEncodingMacRoman;
 const DCFStringEncoding kDCFStringEncodingWindowsLatin1     = kCFStringEncodingWindowsLatin1;
@@ -49,7 +49,7 @@ const DCFStringEncoding kDCFStringEncodingUTF32BE           = kCFStringEncodingU
 const DCFStringEncoding kDCFStringEncodingUTF32LE           = kCFStringEncodingUTF32LE;
 
 DCFString::String() {
-    
+    this->init();
 }
 
 DCFString::~String() {
@@ -110,6 +110,12 @@ DCFString * DCFString::initWithBytes( const uint8_t * buffer, size_t length, DCF
     }
     
     return this;
+}
+
+#pragma mark - DCFHashable
+
+const DCFHashCode DCFString::hash() const {
+    return ( DCFHashCode )CFHash( _storage );
 }
 
 #endif // USE_STD_STRING

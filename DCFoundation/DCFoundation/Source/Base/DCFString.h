@@ -71,6 +71,10 @@ public:
     
     DCFPlatformStringType platformString() const;
     
+#pragma mark DCFHashable Declarations
+        /// Returns a DCFHashCode for the instance. Subclasses MUST override this method.
+    using DCFHashable::hash;
+    
 }; // DCF::MetaClass
 
 DCF_NAMESPACE_END

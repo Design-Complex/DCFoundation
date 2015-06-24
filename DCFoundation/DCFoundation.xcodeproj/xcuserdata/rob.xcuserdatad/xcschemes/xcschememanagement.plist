@@ -4,25 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DCFoundation (CF).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>DCFoundation Tests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>DCFoundation.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>dcftest.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>D45EFEEF1AE041EE007240DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D49BA8D61B3AF6C4006C1997</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D49BA8E81B3AF6E7006C1997</key>
 		<dict>
 			<key>primary</key>
 			<true/>

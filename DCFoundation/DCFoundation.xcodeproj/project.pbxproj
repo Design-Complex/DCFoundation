@@ -46,6 +46,12 @@
 		D4939F331B331CCA005553BF /* DCFSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F311B331CCA005553BF /* DCFSymbol.cpp */; };
 		D4939F341B331CCA005553BF /* DCFSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = D4939F321B331CCA005553BF /* DCFSymbol.h */; };
 		D4939F361B3331C4005553BF /* DCFPlatformTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */; };
+		D49BA8D41B3AEDBD006C1997 /* DCFMutableString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49BA8D21B3AEDBD006C1997 /* DCFMutableString.cpp */; };
+		D49BA8D51B3AEDBD006C1997 /* DCFMutableString.h in Headers */ = {isa = PBXBuildFile; fileRef = D49BA8D31B3AEDBD006C1997 /* DCFMutableString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49BA92B1B3AFAB4006C1997 /* DCFData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49BA9291B3AFAB4006C1997 /* DCFData.cpp */; };
+		D49BA92C1B3AFAB4006C1997 /* DCFData.h in Headers */ = {isa = PBXBuildFile; fileRef = D49BA92A1B3AFAB4006C1997 /* DCFData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49BA92F1B3AFB2E006C1997 /* DCFMutableData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49BA92D1B3AFB2E006C1997 /* DCFMutableData.cpp */; };
+		D49BA9301B3AFB2E006C1997 /* DCFMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = D49BA92E1B3AFB2E006C1997 /* DCFMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E971B305C8B00F5D458 /* DCFString.cpp */; };
 		D4A31E9A1B305C8B00F5D458 /* DCFString.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A31E981B305C8B00F5D458 /* DCFString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */; };
@@ -145,6 +151,13 @@
 		D4939F311B331CCA005553BF /* DCFSymbol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFSymbol.cpp; sourceTree = "<group>"; };
 		D4939F321B331CCA005553BF /* DCFSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFSymbol.h; sourceTree = "<group>"; };
 		D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFPlatformTest.cpp; sourceTree = "<group>"; };
+		D49BA8D21B3AEDBD006C1997 /* DCFMutableString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFMutableString.cpp; sourceTree = "<group>"; };
+		D49BA8D31B3AEDBD006C1997 /* DCFMutableString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFMutableString.h; sourceTree = "<group>"; };
+		D49BA8E71B3AF6C4006C1997 /* DCFoundation Tests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DCFoundation Tests copy-Info.plist"; path = "/Users/rob/Documents/Work/DCFoundation/DCFoundation/DCFoundation Tests copy-Info.plist"; sourceTree = "<absolute>"; };
+		D49BA9291B3AFAB4006C1997 /* DCFData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFData.cpp; sourceTree = "<group>"; };
+		D49BA92A1B3AFAB4006C1997 /* DCFData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFData.h; sourceTree = "<group>"; };
+		D49BA92D1B3AFB2E006C1997 /* DCFMutableData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFMutableData.cpp; sourceTree = "<group>"; };
+		D49BA92E1B3AFB2E006C1997 /* DCFMutableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFMutableData.h; sourceTree = "<group>"; };
 		D4A31E971B305C8B00F5D458 /* DCFString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFString.cpp; sourceTree = "<group>"; };
 		D4A31E981B305C8B00F5D458 /* DCFString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFString.h; sourceTree = "<group>"; };
 		D4A31E9B1B30610000F5D458 /* DCFProcessInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFProcessInfo.cpp; sourceTree = "<group>"; };
@@ -275,6 +288,12 @@
 				D48014AE1B39ACD80009E28F /* DCFStringEncodings.h */,
 				D4A31E981B305C8B00F5D458 /* DCFString.h */,
 				D4A31E971B305C8B00F5D458 /* DCFString.cpp */,
+				D49BA8D31B3AEDBD006C1997 /* DCFMutableString.h */,
+				D49BA8D21B3AEDBD006C1997 /* DCFMutableString.cpp */,
+				D49BA92A1B3AFAB4006C1997 /* DCFData.h */,
+				D49BA9291B3AFAB4006C1997 /* DCFData.cpp */,
+				D49BA92E1B3AFB2E006C1997 /* DCFMutableData.h */,
+				D49BA92D1B3AFB2E006C1997 /* DCFMutableData.cpp */,
 				D4939F321B331CCA005553BF /* DCFSymbol.h */,
 				D4939F311B331CCA005553BF /* DCFSymbol.cpp */,
 				D45EFF3F1AE061F9007240DA /* DCFoundation.cpp */,
@@ -374,6 +393,7 @@
 				D45EFF371AE061F9007240DA /* Source */,
 				D4FC9AA71B0A494C00E6B56D /* DCFoundation Tests */,
 				D4C3518A1AC4A863003ECB09 /* Products */,
+				D49BA8E71B3AF6C4006C1997 /* DCFoundation Tests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,6 +470,7 @@
 				D44165451B2F390D0035B982 /* DCFXMLNode.h in Headers */,
 				D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */,
 				D4FF6DE91B2F19CE00161909 /* DCFXMLAttribute.h in Headers */,
+				D49BA92C1B3AFAB4006C1997 /* DCFData.h in Headers */,
 				6ABC86A91AD81D33001D81AB /* (null) in Headers */,
 				D4939F341B331CCA005553BF /* DCFSymbol.h in Headers */,
 				D48014AF1B39ACD80009E28F /* DCFStringEncodings.h in Headers */,
@@ -459,6 +480,7 @@
 				D4FF6DE71B2F16E900161909 /* DCFXMLBase.h in Headers */,
 				D45EFF5B1AE061F9007240DA /* DCFoundationPriv.h in Headers */,
 				D4A31EA11B3074B800F5D458 /* DCFHashable.h in Headers */,
+				D49BA8D51B3AEDBD006C1997 /* DCFMutableString.h in Headers */,
 				D45EFF591AE061F9007240DA /* DCFSingleton.h in Headers */,
 				D4D900C81AF947840082CC7A /* DCFUtility.h in Headers */,
 				7CD7DC261B2B34F90019313A /* DCFXML.h in Headers */,
@@ -470,6 +492,7 @@
 				6ABC86B51AD81DD5001D81AB /* (null) in Headers */,
 				D45EFF621AE061F9007240DA /* DCFSystem.h in Headers */,
 				D45EFF551AE061F9007240DA /* DCFObject.h in Headers */,
+				D49BA9301B3AFB2E006C1997 /* DCFMutableData.h in Headers */,
 				D4AFAF501B38856C0084B13B /* DCFDarwinPlatform.h in Headers */,
 				D45EFF611AE061F9007240DA /* DCFPlatform.h in Headers */,
 				D4AFAF431B387E530084B13B /* DCFHost.h in Headers */,
@@ -575,15 +598,18 @@
 				D45EFF601AE061F9007240DA /* DCFPlatform.cpp in Sources */,
 				D4AFAF4F1B38856C0084B13B /* DCFDarwinPlatform.cpp in Sources */,
 				D44165441B2F390D0035B982 /* DCFXMLNode.cpp in Sources */,
+				D49BA92B1B3AFAB4006C1997 /* DCFData.cpp in Sources */,
 				D4939F331B331CCA005553BF /* DCFSymbol.cpp in Sources */,
 				D4D900C71AF947840082CC7A /* DCFUtility.cpp in Sources */,
 				D4AFAF421B387E530084B13B /* DCFHost.cpp in Sources */,
+				D49BA8D41B3AEDBD006C1997 /* DCFMutableString.cpp in Sources */,
 				6A02B86D1AEF0ACA00D92050 /* DCFConcurrency.cpp in Sources */,
 				D4A31EA41B30755300F5D458 /* DCFMetaObject.cpp in Sources */,
 				D45EFF571AE061F9007240DA /* DCFRTTI.cpp in Sources */,
 				D45EFF541AE061F9007240DA /* DCFObject.cpp in Sources */,
 				D4FF6DEB1B2F1C2800161909 /* DCFXMLAttribute.cpp in Sources */,
 				D4A31E991B305C8B00F5D458 /* DCFString.cpp in Sources */,
+				D49BA92F1B3AFB2E006C1997 /* DCFMutableData.cpp in Sources */,
 				D4A31E9D1B30610000F5D458 /* DCFProcessInfo.cpp in Sources */,
 				D45EFF511AE061F9007240DA /* DCFDefines.cpp in Sources */,
 			);
@@ -616,7 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
@@ -631,6 +657,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: DESIGN COMPLEX LLC (524DRP4HGE)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -661,7 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
@@ -676,6 +703,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: DESIGN COMPLEX LLC (524DRP4HGE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -702,7 +730,7 @@
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
@@ -711,19 +739,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
-				OTHER_CFLAGS = "-DUSE_COREFOUNDATION";
+				OTHER_CFLAGS = "-DDCF_USE_COREFOUNDATION";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -734,7 +767,7 @@
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
@@ -743,20 +776,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
-				OTHER_CFLAGS = "-DUSE_COREFOUNDATION";
+				OTHER_CFLAGS = "-DDCF_USE_COREFOUNDATION";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -772,7 +810,6 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -780,6 +817,7 @@
 				);
 				INFOPLIST_FILE = "DCFoundation Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_CFLAGS = "-DDCF_USE_COREFOUNDATION";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -794,10 +832,10 @@
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "DCFoundation Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_CFLAGS = "-DDCF_USE_COREFOUNDATION";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
