@@ -10,6 +10,8 @@
 #include <DCFoundation/DCFObject.h>
 #include <DCFoundation/DCFLockable.h>
 
+#if 0
+
 DCF_TEST_NAMESPACE_BEGIN
 
 class DCFLockableTest : public ::testing::Test {};
@@ -162,3 +164,4 @@ TEST_F( DCFLockableTest, recursiveMutexMove ) {
 }
 
 DCF_TEST_NAMESPACE_END
+#endif // 0

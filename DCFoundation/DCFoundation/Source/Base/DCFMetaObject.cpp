@@ -29,7 +29,7 @@ DCF_LIBRARY_INITIALIZER void DCFInitMetaObject() {
     } );
 }
 
-DCFDefineAbstractDestructor( DCFMetaObject );
+DCFDefineAbstractDestructor( MetaObject );
 
 std::string DCFMetaObject::description() const {
     return this->debugDescription();
@@ -42,7 +42,8 @@ std::string DCFMetaObject::debugDescription() const {
     ss << this->className();
         //    ss << "( " << typeid( *this ).name() << " )";
     ss << "@";
-    ss << static_cast<const void *>( this );
+//    ss << static_cast<void const *>( this );
+    ss << this;
     ss << ">";
     
     return ss.str();
@@ -96,23 +97,35 @@ const std::string & DCFMetaObject::className() const {
     return dict[ type ];
 }
 
-//bool DCFMetaObject::operator ==( const DCFMetaObject & rhs ) const {
-//    return ( this->hash() == rhs.hash() );
-//}
-//
-//bool DCFMetaObject::operator !=( const DCFMetaObject & rhs ) const {
-//    return !( this->operator==( rhs ) );
-//}
-//
-//bool DCFMetaObject::operator ==( const DCFMetaObject * rhs ) const {
-//    if( this == rhs )
-//        return true;
+bool DCFMetaObject::operator ==( const DCFMetaObject & rhs ) const {
+    std::hash<decltype( this )> hasher;
+    return ( ( this == &rhs ) || hasher( this ) == hasher( &rhs ) );
+}
+
+bool DCFMetaObject::operator !=( const DCFMetaObject & rhs ) const {
+    return !( this->operator==( rhs ) );
+}
+
+bool DCFMetaObject::operator ==( const DCFMetaObject * rhs ) const {
+    std::hash<decltype( this )> hasher;
+    
+    return ( ( this == rhs ) || hasher( this ) == hasher( rhs ) );
+}
+
+bool DCFMetaObject::operator !=( const DCFMetaObject * rhs ) const {
+    return !( this->operator==( rhs ) );
+}
+
+//std::ostream & operator<<( std::ostream &os, const DCFMetaObject & rhs ) {
+//    os << rhs.description();
 //    
-//    return ( this->hash() == rhs->hash() );
+//    return os;
 //}
 //
-//bool DCFMetaObject::operator !=( const DCFMetaObject * rhs ) const {
-//    return !( this->operator==( rhs ) );
+//std::ostream & operator<<( std::ostream &os, const DCFMetaObject * rhs ) {
+//    os << rhs->description();
+//    
+//    return os;
 //}
 
 DCF_NAMESPACE_END

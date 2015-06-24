@@ -20,8 +20,10 @@ DCF_NAMESPACE_BEGIN
 typedef std::size_t  HashCode;
 
 class DCF_VISIBLE Hashable {
+protected:
     DCFDeclareAbstractDestructor( Hashable );
-    
+
+public:
         /// Returns a DCFHashCode for the instance. Classes adopting this interface MUST override this method.
     virtual const HashCode hash() const = 0;
 };

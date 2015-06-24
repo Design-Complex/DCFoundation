@@ -27,20 +27,23 @@ DCF_NAMESPACE_BEGIN
  @namespace DCF
  */
 class DCF_VISIBLE Object : public virtual DCFMetaObject, public virtual DCFHashable {
-    DCFDeclareAbstractDestructor( Object );
-    
 private:
     std::atomic<size_t>      _retainCount   = ATOMIC_VAR_INIT( 0 );
+    DCFPrivateCopyAndAssign( Object )
     
 protected:
-    static void * operator new( size_t size );
-    static void operator delete( void * mem );
-        //static Object * alloc();
+    DCFDeclareAbstractDestructor( Object );
     
-        // The default initializer. Subclasses MUST override this method, and should call this method FIRST by default.
+        // Basic Constructors
+    Object();
+    
+    // The default initializer. Subclasses MUST override this method, and should call this method FIRST by default.
     virtual Object * init() = 0;
     
 public:
+    static void * operator new( size_t size );
+    static void operator delete( void * mem, size_t size );
+        //static Object * alloc();
     
 #pragma mark Object Lifetime
     
@@ -60,7 +63,6 @@ public:
     
         /// Returns true only if the hash values of the two pointers is not equal.
     virtual bool operator !=( const Object * rhs ) const;
-    
     
 #pragma mark DCFHashable Declarations
     /// Returns a DCFHashCode for the instance. Subclasses MUST override this method.

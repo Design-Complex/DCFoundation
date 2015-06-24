@@ -63,7 +63,7 @@ DCFPrivateCopyAndAssign( TypeName )
 #define DCFPrivateCopyAndAssign( TypeName ) \
 private: \
 TypeName( const TypeName & ); \
-TypeName & operator=( const TypeName & ) \
+TypeName & operator=( const TypeName & ); \
 void operator=( const TypeName & )
 
 #define DCFPrivateConstructors( TypeName ) \

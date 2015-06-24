@@ -11,13 +11,14 @@
 #include <sstream>
 #include <cxxabi.h>
 #include <map>
+#include <iostream>
 
 DCF_NAMESPACE_BEGIN
 
 DCFDefineAbstractDestructor( Object );
 DCFDefineAbstractDestructor( Hashable );
 
-#pragma mark - Object Lifetime
+#pragma mark Constructors & Destructor
 
 void * DCFObject::operator new( size_t size ) {
         // TODO: There's got to be more of it than this
@@ -29,9 +30,18 @@ void * DCFObject::operator new( size_t size ) {
     return ( mem );
 }
 
-void DCFObject::operator delete( void * mem ) {
-    free( mem );
+void DCFObject::operator delete( void * mem, size_t size ) {
+#if DEBUG
+    std::cout << "deleting " << size << " bytes" << std::endl;
+#endif
+    ::operator delete( mem );
 }
+
+DCFObject::Object() {
+    
+}
+
+#pragma mark - Object Lifetime
 
 Object * DCFObject::init() {
     if( _retainCount > 0 )
@@ -45,13 +55,14 @@ size_t DCFObject::retainCount() const {
 }
 
 Object * DCFObject::retain() {
-    _retainCount.fetch_add( 1 );
+    ++_retainCount;
     
     return this;
 }
 
 Object * DCFObject::release() {
-    size_t result = _retainCount.fetch_sub( 1 );
+    size_t result = --_retainCount;
+    
     if( result == 0 ) { // We've over released!
         delete this;
     }
@@ -70,7 +81,7 @@ const DCFHashCode DCFHashable::hash() const {
 #pragma mark Comparison Operators
 
 bool DCFObject::operator ==( const DCFObject & rhs ) const {
-    return ( this->hash() == rhs.hash() );
+    return ( ( this->DCFMetaObject::operator==( rhs ) ) || ( this->hash() == rhs.hash() ) );
 }
 
 bool DCFObject::operator !=( const DCFObject & rhs ) const {
@@ -78,10 +89,7 @@ bool DCFObject::operator !=( const DCFObject & rhs ) const {
 }
 
 bool DCFObject::operator ==( const DCFObject * rhs ) const {
-    if( this == rhs )
-        return true;
-    
-    return ( this->hash() == rhs->hash() );
+    return ( ( this->DCFMetaObject::operator==( rhs ) ) || ( this->hash() == rhs->hash() ) );
 }
 
 bool DCFObject::operator !=( const DCFObject * rhs ) const {

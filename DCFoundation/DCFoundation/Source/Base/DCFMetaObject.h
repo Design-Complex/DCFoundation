@@ -13,12 +13,13 @@
 #include <DCFoundation/DCFPlatform.h>
 #include <string>
 #include <vector>
+#include <iostream>
 
 DCF_NAMESPACE_BEGIN
 
-class DCF_VISIBLE DCFMetaObject {
+class DCF_VISIBLE MetaObject {
 public:
-    DCFDeclareAbstractDestructor( DCFMetaObject );
+    DCFDeclareAbstractDestructor( MetaObject );
     
     /** Returns a string representation of the object.
      @return A std::string reference
@@ -40,19 +41,29 @@ public:
         /// Returns a string containing the unmangled type name of the object.
     virtual const std::string & className() const;
     
-//        /// Returns true if the classes are equal
-//    virtual bool operator ==( const DCFMetaObject & rhs ) const;
-//    
-//        /// Returns true if the classes are not equal. The default implementation calls !(operator==).
-//    virtual bool operator !=( const DCFMetaObject & rhs ) const;
-//    
-//        /// Returns true if the pointers to both objects are equal. If they are *equivalent* meaning the hash codes are the same, this also returns true. If this is not desired behavior, subclasses SHOULD override this method.
-//    virtual bool operator ==( const DCFMetaObject * rhs ) const;
-//    
-//        /// Returns true only if the hash values of the two pointers is not equal.
-//    virtual bool operator !=( const DCFMetaObject * rhs ) const;
+        /// Returns true if the classes are equal
+    virtual bool operator ==( const MetaObject & rhs ) const;
+    
+        /// Returns true if the classes are not equal. The default implementation calls !(operator==).
+    virtual bool operator !=( const MetaObject & rhs ) const;
+    
+        /// Returns true if the pointers to both objects are equal. If they are *equivalent* meaning the hash codes are the same, this also returns true. If this is not desired behavior, subclasses SHOULD override this method.
+    virtual bool operator ==( const MetaObject * rhs ) const;
+    
+        /// Returns true only if the hash values of the two pointers is not equal.
+    virtual bool operator !=( const MetaObject * rhs ) const;
+    
 }; // DCFMetaObject
 
+    /// Generic output operators
+    /// Notice they are NOT friends. They call rhs->description() for printing.
+//std::ostream & operator<<( std::ostream &os, const MetaObject & rhs );
+//std::ostream & operator<<( std::ostream &os, const MetaObject * rhs );
+
 DCF_NAMESPACE_END
+
+typedef DCF::MetaObject DCFMetaObject;
+
+
 
 #endif // _DCFMetaObject_

@@ -21,6 +21,7 @@
 		7CD7DC2A1B2B35600019313A /* DCFXMLDOM.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7DC291B2B35600019313A /* DCFXMLDOM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CD7DC2C1B2B35850019313A /* DCFXMLSAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7DC2B1B2B35850019313A /* DCFXMLSAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */; };
+		D415D0271B3B23BF0026A842 /* DCFStringTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D415D0261B3B23BF0026A842 /* DCFStringTest.cpp */; };
 		D44165441B2F390D0035B982 /* DCFXMLNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D44165421B2F390D0035B982 /* DCFXMLNode.cpp */; };
 		D44165451B2F390D0035B982 /* DCFXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D44165431B2F390D0035B982 /* DCFXMLNode.h */; };
 		D45EFF501AE061F9007240DA /* DCFBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFF391AE061F9007240DA /* DCFBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,7 +42,7 @@
 		D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D46113271B1F53670019775A /* DCFLockableTest.cpp */; };
 		D4617F0E1AE06C56009B092C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4617F0D1AE06C56009B092C /* libc++.dylib */; };
 		D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */; };
-		D48014AF1B39ACD80009E28F /* DCFStringEncodings.h in Headers */ = {isa = PBXBuildFile; fileRef = D48014AE1B39ACD80009E28F /* DCFStringEncodings.h */; };
+		D48014AF1B39ACD80009E28F /* DCFStringEncodings.h in Headers */ = {isa = PBXBuildFile; fileRef = D48014AE1B39ACD80009E28F /* DCFStringEncodings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4806AEE1B16498500F3609C /* DCFXMLRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = D4806AED1B16498500F3609C /* DCFXMLRepresentation.h */; };
 		D4939F331B331CCA005553BF /* DCFSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4939F311B331CCA005553BF /* DCFSymbol.cpp */; };
 		D4939F341B331CCA005553BF /* DCFSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = D4939F321B331CCA005553BF /* DCFSymbol.h */; };
@@ -119,6 +120,7 @@
 		7CD7DC2B1B2B35850019313A /* DCFXMLSAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFXMLSAX.h; sourceTree = "<group>"; };
 		D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFObjectTest.cpp; sourceTree = "<group>"; };
 		D40A09931B0B73EC003F947F /* DCFTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFTesting.h; sourceTree = "<group>"; };
+		D415D0261B3B23BF0026A842 /* DCFStringTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFStringTest.cpp; sourceTree = "<group>"; };
 		D42779941AEEBE6500B6680A /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = /Library/Frameworks/gtest.framework; sourceTree = "<absolute>"; };
 		D42779961AEEBF9500B6680A /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = /Library/Frameworks/gtest.framework/Resources/libgtest_main.a; sourceTree = "<absolute>"; };
 		D44165421B2F390D0035B982 /* DCFXMLNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DCFXMLNode.cpp; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			children = (
 				D40A09931B0B73EC003F947F /* DCFTesting.h */,
 				D40A09911B0B73CE003F947F /* DCFObjectTest.cpp */,
+				D415D0261B3B23BF0026A842 /* DCFStringTest.cpp */,
 				D474FCC71B20AD5900AC27AC /* DCFUtilityTest.cpp */,
 				D46113271B1F53670019775A /* DCFLockableTest.cpp */,
 				D4939F351B3331C4005553BF /* DCFPlatformTest.cpp */,
@@ -621,6 +624,7 @@
 			files = (
 				D474FCC81B20AD5900AC27AC /* DCFUtilityTest.cpp in Sources */,
 				D40A09921B0B73CE003F947F /* DCFObjectTest.cpp in Sources */,
+				D415D0271B3B23BF0026A842 /* DCFStringTest.cpp in Sources */,
 				D4FC9AB31B0A49D800E6B56D /* DCFGoogleTestAdaptor.mm in Sources */,
 				D46113281B1F53670019775A /* DCFLockableTest.cpp in Sources */,
 				D4939F361B3331C4005553BF /* DCFPlatformTest.cpp in Sources */,
